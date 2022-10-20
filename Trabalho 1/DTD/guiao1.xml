@@ -1,0 +1,48 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE guiao SYSTEM "guiao.dtd" [
+    <!ENTITY aderecos SYSTEM "aderecos.xml">
+    <!ENTITY personagens SYSTEM "personagens.xml">
+]>
+
+<guiao>
+    <cabecalho>
+        <titulo>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</titulo>
+        <autores>
+            <autor>Manel Da Vinha</autor>
+            <autor>To Ze Antonio</autor>
+        </autores>
+        <data>
+            <ano>2020</ano>
+            <mes>01</mes>
+            <dia>10</dia>
+        </data>
+        <sinopse>It is a long established fact that a reader will be distracted by the readable
+            content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+            has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+            content here', making it look like readable English. Many desktop publishing packages
+            and web page editors now use Lorem Ipsum as their default model text, and a search for
+            'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and
+            the like). </sinopse>
+        &personagens;
+        &aderecos;
+    </cabecalho>
+    <historia>
+        <temporada>
+            <episodio>
+                <parte>
+                    <cena contexto=""/>
+                </parte>
+                <parte>
+                    <cena contexto=""/>
+                </parte>
+            </episodio>
+            <episodio>
+                <cena contexto="A caminhar na rua"> Numa caminhada matinal <comentario> O Quim cai </comentario>
+                    <fala ref-personagem="p1"> Que caraças Jorge</fala> pega na <refAdereco
+                        ref-adereco="adr1"/> para matar o <refere ref-personagem="p2"/>. E o Jorge
+                    fugiu. </cena>
+            </episodio>
+        </temporada>
+    </historia>
+</guiao>
