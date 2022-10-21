@@ -1,10 +1,10 @@
 <!ENTITY % TXT "#PCDATA">
 
 <!-- Cabeçalho-->
-<!ELEMENT guiao (cabecalho, historia)>
+<!ELEMENT guiao (cabecalho, conteudo)>
 
 <!ELEMENT cabecalho (titulo, (autor | autores), data, sinopse?, personagens, aderecos)>
-<!ELEMENT historia (temporada+ | parte+ | cena+) >
+<!ELEMENT conteudo (temporada+ | parte+ | cena+) >
 
 <!ELEMENT titulo (%TXT;)>
 <!ELEMENT autores (autor)+>
@@ -32,7 +32,7 @@
 
 <!ELEMENT parte ((personagem | personagens)?, cena+)>
 
-<!ELEMENT cena ( %TXT; | fala | refere | comentario | refAdereco)*>
+<!ELEMENT cena ( %TXT; | fala | refere | comentario | adereco)*>
 <!ATTLIST cena contexto CDATA #REQUIRED>
 
 <!ELEMENT fala (%TXT;)>
@@ -43,10 +43,10 @@
 <!ELEMENT refere EMPTY>
 <!ATTLIST refere ref-personagem IDREF #REQUIRED>
 
-<!ELEMENT aderecos (adereco)+>
+<!ELEMENT aderecos (itemAdereco)+>
 
-<!ELEMENT adereco (%TXT;)>
-<!ATTLIST adereco id ID #REQUIRED>
+<!ELEMENT itemAdereco (%TXT;)>
+<!ATTLIST itemAdereco id ID #REQUIRED>
 
-<!ELEMENT refAdereco EMPTY>
-<!ATTLIST refAdereco ref-adereco IDREF #REQUIRED>
+<!ELEMENT adereco EMPTY>
+<!ATTLIST adereco ref-adereco IDREF #REQUIRED>

@@ -10,8 +10,29 @@
             <autor>Teste autor 2</autor>
         </autores>
         <sinopse>TESTE sinopse</sinopse>
-        <xi:include href="personagens.xml"/>
-        <xi:include href="aderecos.xml"/>
+        <xi:include href="personagens.xml" parse="xml"/>
+        <xi:include href="aderecos.xml" parse="xml"/>
     </cabecalho>
-    <historia/>
+    <conteudo>
+        <temporada xmlns="hierarquia">
+            <personagem id="p3" descricao="personagem nova1">Nemo</personagem>
+            <episodio>
+                <personagem id="p4" descricao="personagem nova2">Pirata novo 2</personagem>
+                <parte>
+                    <personagem id="p5" descricao="personagem nova3">Pirata novo 3</personagem>
+                    <cena contexto=""/>
+                </parte>
+                <parte>
+                    <cena contexto=""/>
+                </parte>
+            </episodio>
+            <episodio>
+                <cena contexto="A caminhar na rua"> Numa caminhada matinal <comentario> O Quim cai </comentario>
+                    <fala ref-personagem="p1"> Que caraças Jorge</fala> pega na
+                     <adereco ref-adereco="adr1" /> para matar o <refere ref-personagem="p2"/>. E o
+                    Jorge fugiu. <fala ref-personagem="p2"/>
+                </cena>
+            </episodio>
+        </temporada>
+    </conteudo>
 </guiao>

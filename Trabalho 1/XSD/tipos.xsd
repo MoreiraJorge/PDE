@@ -1,20 +1,37 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="tipo" elementFormDefault="qualified">
-    
+<xs:schema xmlns="tipo" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="tipo"
+    elementFormDefault="qualified">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
+
     <xs:complexType name="Personagem">
         <xs:simpleContent>
             <xs:extension base="xs:normalizedString">
-                <xs:attribute name="id" type="xs:normalizedString"/>
+                <xs:attribute name="id" type="xs:ID"/>
                 <xs:attribute name="descricao" type="xs:normalizedString"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
-    
+
+    <xs:complexType name="Personagens">
+        <xs:sequence>
+            <xs:element name="personagem" type="Personagem" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute ref="xml:base"/>
+    </xs:complexType>
+
     <xs:complexType name="Adereco">
         <xs:simpleContent>
             <xs:extension base="xs:normalizedString">
-                <xs:attribute name="id" type="xs:normalizedString"/>
+                <xs:attribute name="id" type="xs:ID"/>
             </xs:extension>
         </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Aderecos">
+        <xs:sequence>
+            <xs:element name="adereco" type="Adereco" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute ref="xml:base"/>
     </xs:complexType>
 </xs:schema>

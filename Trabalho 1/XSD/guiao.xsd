@@ -1,19 +1,19 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tipo="tipo">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tipo="tipo"
+    xmlns:hierarquia="hierarquia">
     <!-- https://stackoverflow.com/questions/22774425/attempting-to-connect-xml-files-with-xinclude-attribute-xmlbase-error -->
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
     <xs:import namespace="tipo" schemaLocation="tipos.xsd"/>
+    <xs:import namespace="hierarquia" schemaLocation="hierarquia.xsd"/>
 
     <xs:element name="guiao" type="Guiao"/>
-    <!-- Nota: Perguntar sobre declaração global de autor e implicações -->
-    <xs:element name="autor" type="xs:string"/>
 
     <xs:complexType name="Guiao">
         <xs:sequence>
             <xs:element name="cabecalho" type="Cabecalho"/>
-            <xs:element name="historia"/>
+            <xs:element name="conteudo" type="hierarquia:Conteudo"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -22,34 +22,19 @@
             <xs:element name="titulo" type="xs:string"/>
             <xs:choice>
                 <xs:element name="autores" type="Autores"/>
-                <xs:element ref="autor"/>
+                <xs:element name="autor" type="xs:normalizedString"/>
             </xs:choice>
             <xs:element name="sinopse" type="xs:string"/>
-            <xs:element name="personagens" type="Personagens"/>
-            <xs:element name="aderecos" type="Aderecos"/>
+            <xs:element name="personagens" type="tipo:Personagens"/>
+            <xs:element name="aderecos" type="tipo:Aderecos"/>
         </xs:sequence>
         <xs:attribute name="data" type="xs:date"/>
     </xs:complexType>
 
     <xs:complexType name="Autores">
         <xs:sequence>
-            <xs:element ref="autor" minOccurs="2" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="Personagens">
-        <xs:sequence>
-            <xs:element name="personagem" type="tipo:Personagem" minOccurs="1" maxOccurs="unbounded"
+            <xs:element name="autor" type="xs:normalizedString" minOccurs="2" maxOccurs="unbounded"
             />
         </xs:sequence>
-        <xs:attribute ref="xml:base"/>
     </xs:complexType>
-
-    <xs:complexType name="Aderecos">
-        <xs:sequence>
-            <xs:element name="adereco" type="tipo:Adereco" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-        <xs:attribute ref="xml:base"/>
-    </xs:complexType>
-
 </xs:schema>
