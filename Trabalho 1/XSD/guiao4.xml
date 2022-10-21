@@ -1,0 +1,20 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+
+<guiao xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="guiao.xsd">
+    <cabecalho data="2022-01-01">
+        <titulo>Título teste</titulo>
+        <!-- <autor>Teste</autor> -->
+        <autores>
+            <autor>Teste autor 1</autor>
+            <autor>Teste autor 2</autor>
+        </autores>
+        <sinopse>TESTE sinopse</sinopse>
+        <!-- <personagens> 
+            <personagem id="p1" descricao="personagem nova">Pirata novo</personagem>
+        </personagens> -->
+        <xi:include href="personagens.xml"/>
+        <xi:include href="aderecos.xml"/>
+    </cabecalho>
+    <historia/>
+</guiao>

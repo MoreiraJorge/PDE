@@ -1,0 +1,6 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<personagens>
+    <personagem id="p1" descricao="personagem nova">Pirata novo</personagem>
+    <personagem id="p2" descricao="personagem velha">Pirata velho</personagem>
+</personagens>
