@@ -1,12 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <personagens>
-    <personagem identificador="p1">
-        <nome>Felizberto</nome>
-        <descricao>Pirata com pernas partidas</descricao>
-    </personagem>
-    <personagem identificador="p2">
-        <nome>Joao</nome>
-        <descricao>Pirata com olho de vidro</descricao>
-    </personagem>
+    <personagem id="p1" descricao="personagem nova">Pirata novo</personagem>
+    <personagem id="p2" descricao="personagem velha">Pirata velho</personagem>
 </personagens>

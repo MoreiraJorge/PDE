@@ -1,0 +1,69 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:tipo="tipo">
+    <xs:import namespace="tipo" schemaLocation="tipos.xsd"/>
+
+    <xs:element name="historia" type="Historia"/>
+
+    <xs:complexType name="Historia">
+        <xs:choice>
+            <xs:element name="temporada" type="Temporada" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="parte" type="Parte" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="cena" type="Cena" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="Temporada">
+        <xs:sequence>
+            <xs:element name="episodio" type="Episodio" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Episodio">
+        <xs:choice>
+            <xs:element name="parte" type="Parte" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="cena" type="Cena" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="Parte">
+        <xs:sequence>
+            <xs:element name="cena" type="Cena" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Cena">
+        <xs:all>
+            <xs:element name="fala" type="Fala"/>
+            <xs:element name="comentario" type="xs:normalizedString"/>
+
+        </xs:all>
+        <xs:attribute name="contexto" type="xs:normalizedString"/>
+    </xs:complexType>
+
+    <!-- Ver forma de reaporveitar código -->
+    <xs:complexType name="Fala">
+        <xs:simpleContent>
+            <xs:extension base="xs:normalizedString">
+                <xs:attribute name="ref-personagem" type="xs:IDREF"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Refere">
+        <xs:simpleContent>
+            <xs:extension base="xs:normalizedString">
+                <xs:attribute name="ref-personagem" type="xs:IDREF"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Adereco">
+        <xs:simpleContent>
+            <xs:extension base="xs:normalizedString">
+                <xs:attribute name="ref-personagem" type="xs:IDREF"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

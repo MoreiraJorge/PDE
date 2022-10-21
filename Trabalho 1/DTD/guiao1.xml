@@ -29,8 +29,11 @@
     </cabecalho>
     <historia>
         <temporada>
+            <personagem id="p3" descricao="personagem nova1">Nemo</personagem>
             <episodio>
+                <personagem id="p4" descricao="personagem nova2">Pirata novo 2</personagem>
                 <parte>
+                    <personagem id="p5" descricao="personagem nova3">Pirata novo 3</personagem>
                     <cena contexto=""/>
                 </parte>
                 <parte>

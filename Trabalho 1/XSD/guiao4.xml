@@ -10,9 +10,6 @@
             <autor>Teste autor 2</autor>
         </autores>
         <sinopse>TESTE sinopse</sinopse>
-        <!-- <personagens> 
-            <personagem id="p1" descricao="personagem nova">Pirata novo</personagem>
-        </personagens> -->
         <xi:include href="personagens.xml"/>
         <xi:include href="aderecos.xml"/>
     </cabecalho>

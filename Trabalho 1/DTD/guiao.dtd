@@ -18,20 +18,21 @@
 <!ELEMENT sinopse (%TXT;)>
 
 <!ELEMENT personagens (personagem)+>
-<!ELEMENT personagem (nome, descricao)>
-<!ATTLIST personagem identificador ID #REQUIRED>
+<!ELEMENT personagem (%TXT;)>
+<!ATTLIST personagem id ID #REQUIRED
+                     descricao CDATA #REQUIRED>
+
 <!ELEMENT nome (%TXT;)>
 <!ELEMENT descricao (%TXT;)>
 
 <!-- Hierarquia-->
-<!ELEMENT temporadas (temporada)+>
 <!ELEMENT temporada ((personagem | personagens)?, episodio+)>
 
-<!ELEMENT episodio (parte+ | cena+)>
+<!ELEMENT episodio ((personagem | personagens)?, (parte+ | cena+))>
 
-<!ELEMENT parte (cena)+>
+<!ELEMENT parte ((personagem | personagens)?, cena+)>
 
-<!ELEMENT cena ( %TXT; | fala| refere | comentario | refAdereco)*>
+<!ELEMENT cena ( %TXT; | fala | refere | comentario | refAdereco)*>
 <!ATTLIST cena contexto CDATA #REQUIRED>
 
 <!ELEMENT fala (%TXT;)>

@@ -1,8 +1,10 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tipo="tipo">
     <!-- https://stackoverflow.com/questions/22774425/attempting-to-connect-xml-files-with-xinclude-attribute-xmlbase-error -->
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
+    <xs:import namespace="tipo" schemaLocation="tipos.xsd"/>
 
     <xs:element name="guiao" type="Guiao"/>
     <!-- Nota: Perguntar sobre declaração global de autor e implicações -->
@@ -37,33 +39,17 @@
 
     <xs:complexType name="Personagens">
         <xs:sequence>
-            <xs:element name="personagem" type="Personagem" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="personagem" type="tipo:Personagem" minOccurs="1" maxOccurs="unbounded"
+            />
         </xs:sequence>
         <xs:attribute ref="xml:base"/>
-    </xs:complexType>
-
-    <xs:complexType name="Personagem">
-        <xs:simpleContent>
-            <xs:extension base="xs:normalizedString">
-                <xs:attribute name="id" type="xs:normalizedString"/>
-                <xs:attribute name="descricao" type="xs:normalizedString"/>
-            </xs:extension>
-        </xs:simpleContent>
     </xs:complexType>
 
     <xs:complexType name="Aderecos">
         <xs:sequence>
-            <xs:element name="adereco" type="Adereco" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="adereco" type="tipo:Adereco" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute ref="xml:base"/>
-    </xs:complexType>
-
-    <xs:complexType name="Adereco">
-        <xs:simpleContent>
-            <xs:extension base="xs:normalizedString">
-                <xs:attribute name="id" type="xs:normalizedString"/>
-            </xs:extension>
-        </xs:simpleContent>
     </xs:complexType>
 
 </xs:schema>
