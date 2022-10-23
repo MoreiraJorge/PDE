@@ -1,5 +1,5 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE guiao SYSTEM "guiao.dtd" [
+<!DOCTYPE guiao SYSTEM "../guiao.dtd" [
     <!ENTITY aderecos SYSTEM "aderecos.xml">
     <!ENTITY personagens SYSTEM "personagens.xml">
 ]>
@@ -8,8 +8,8 @@
     <cabecalho>
         <titulo>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</titulo>
         <autores>
-            <autor>Manel Da Vinha</autor>
-            <autor>To Ze Antonio</autor>
+            <autor>Jorge</autor>
+            <autor>Joaquim</autor>
         </autores>
         <data>
             <ano>2020</ano>
@@ -29,22 +29,20 @@
     </cabecalho>
     <conteudo>
         <temporada>
-            <personagem id="p3" descricao="personagem nova1">Nemo</personagem>
+            <personagem id="p3" descricao="personagem papagaio">Faisca</personagem>
             <episodio>
-                <personagem id="p4" descricao="personagem nova2">Pirata novo 2</personagem>
-                <parte>
-                    <personagem id="p5" descricao="personagem nova3">Pirata novo 3</personagem>
-                    <cena contexto=""/>
-                </parte>
-                <parte>
-                    <cena contexto=""/>
-                </parte>
-            </episodio>
-            <episodio>
-                <cena contexto="A caminhar na rua"> Numa caminhada matinal <comentario> O Quim cai </comentario>
-                    <fala ref-personagem="p1"> Que caraças Jorge</fala> pega na <adereco
-                        ref-adereco="adr1"/> para matar o <refere ref-personagem="p2"/>. E o Jorge
-                    fugiu. </cena>
+                <cena
+                    contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+                    > Durante uma tempestadde maritima do mar mediterraneo o <refere
+                        ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao <refere
+                        ref-personagem="p2"/> . Durante esta descoberta o <refere
+                        ref-personagem="p1"/> disse ao <refere ref-personagem="p3"/> : <fala
+                        ref-personagem="p1">
+                        <refere ref-personagem="p3"/> , buscar a minha <adereco ref-adereco="adr2"/>
+                        ! </fala>
+                    <comentario>O papagaio voa para até ela</comentario> Entretanto o <refere
+                        ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para
+                    atacar... </cena>
             </episodio>
         </temporada>
     </conteudo>

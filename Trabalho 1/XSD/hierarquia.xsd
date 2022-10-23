@@ -51,13 +51,21 @@
 
     <xs:complexType name="Cena" mixed="true">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="fala" type="RefPersonagem" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="fala" type="Fala" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="comentario" type="xs:normalizedString" minOccurs="0"
                 maxOccurs="unbounded"/>
             <xs:element name="refere" type="RefPersonagem" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="adereco" type="RefAdereco" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="contexto" type="xs:normalizedString"/>
+    </xs:complexType>
+
+    <xs:complexType name="Fala" mixed="true">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="refere" type="RefPersonagem" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="adereco" type="RefAdereco" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="ref-personagem" type="xs:IDREF"/>
     </xs:complexType>
 
     <xs:complexType name="RefPersonagem">

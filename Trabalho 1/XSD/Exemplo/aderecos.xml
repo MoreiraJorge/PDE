@@ -2,6 +2,6 @@
 
 <aderecos xmlns:tipo="tipo">
     <tipo:adereco id="adr1">Arma</tipo:adereco>
-    <tipo:adereco id="adr2">Objeto 2</tipo:adereco>
-    <tipo:adereco id="adr3">Caçadeira</tipo:adereco>
+    <tipo:adereco id="adr2">Espada</tipo:adereco>
+    <tipo:adereco id="adr3">Canhão</tipo:adereco>
 </aderecos>

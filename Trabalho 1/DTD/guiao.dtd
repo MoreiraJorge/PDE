@@ -35,7 +35,7 @@
 <!ELEMENT cena ( %TXT; | fala | refere | comentario | adereco)*>
 <!ATTLIST cena contexto CDATA #REQUIRED>
 
-<!ELEMENT fala (%TXT;)>
+<!ELEMENT fala (%TXT; | adereco | refere)*>
 <!ATTLIST fala ref-personagem IDREF #REQUIRED>
 
 <!ELEMENT comentario (%TXT;)>
