@@ -1,5 +1,5 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<xs:schema xmlns="tipo" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="tipo"
+<xs:schema xmlns="urn:tipo" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:tipo"
     elementFormDefault="qualified">
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>

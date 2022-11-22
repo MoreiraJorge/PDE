@@ -20,7 +20,7 @@
         <xi:include href="aderecos.xml" parse="xml"/>
     </cabecalho>
     <conteudo>
-        <temporada xmlns="hierarquia">
+        <temporada xmlns="urn:hierarquia">
             <personagem id="p3" descricao="personagem papagaio">Faisca</personagem>
             <episodio>
                 <cena

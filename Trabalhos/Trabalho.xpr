@@ -13,11 +13,14 @@
             </serialized>
         </options>
     </meta>
-    <projectTree name="trabalho1.xpr">
+    <projectTree name="Trabalho.xpr">
         <folder masterFiles="true" name="Main Files">
-            <file name="Trabalho%201/DTD/guiao1.xml"/>
-            <file name="Trabalho%201/DTD/guiao2.xml"/>
-            <file name="Trabalho%201/DTD/guiao3.xml"/>
+            <file name="Trabalho%201/XSD/Exemplo/guiao1.xml"/>
+            <file name="Trabalho%202/XSD/Exemplo%20vscode/guiao1_vsc.xml"/>
+            <file name="Trabalho%201/XSD/Exemplo/guiao2.xml"/>
+            <file name="Trabalho%202/XSD/Exemplo%20vscode/guiao2_vsc.xml"/>
+            <file name="Trabalho%201/XSD/Exemplo/guiao3.xml"/>
+            <file name="Trabalho%202/XSD/Exemplo%20vscode/guiao3_vsc.xml"/>
         </folder>
         <folder path="."/>
     </projectTree>

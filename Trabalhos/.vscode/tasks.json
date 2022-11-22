@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "xslt-js",
+			"label": "xslt-js: Saxon-JS Transform (New)",
+			"xsltFile": "${file}",
+			"xmlSource": "${file}",
+			"resultPath": "${workspaceFolder}/xslt-out/result1.xml",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$saxon-xslt-js"
+			]
+		}
+	]
+}

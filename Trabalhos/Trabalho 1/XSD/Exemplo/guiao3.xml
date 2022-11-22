@@ -2,7 +2,7 @@
 
 <guiao xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../guiao.xsd"
-    xmlns:hierarquia="hierarquia">
+    xmlns:hierarquia="urn:hierarquia">
     <cabecalho data="2022-01-01">
         <titulo>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</titulo>
         <autores>

@@ -1,7 +1,7 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 
 <guiao xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../guiao.xsd" xmlns:hierarquia="hierarquia">
+    xsi:noNamespaceSchemaLocation="../guiao.xsd" xmlns:hierarquia="urn:hierarquia">
     <cabecalho data="2022-01-01">
         <titulo>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</titulo>
         <autores>
@@ -16,11 +16,11 @@
             'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
             evolved over the years, sometimes by accident, sometimes on purpose (injected humour and
             the like). </sinopse>
-        <personagens xmlns:tipo="tipo">
+        <personagens xmlns:tipo="urn:tipo">
             <tipo:personagem id="p1" descricao="personagem pirata malvado">Pirata</tipo:personagem>
             <tipo:personagem id="p2" descricao="personagem capitão valente">Capitão valente</tipo:personagem>
         </personagens>
-        <aderecos xmlns:tipo="tipo">
+        <aderecos xmlns:tipo="urn:tipo">
             <tipo:adereco id="adr1">Arma</tipo:adereco>
             <tipo:adereco id="adr2">Espada</tipo:adereco>
             <tipo:adereco id="adr3">Canhão</tipo:adereco>

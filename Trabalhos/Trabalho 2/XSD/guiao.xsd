@@ -1,12 +1,12 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tipo="tipo"
-    xmlns:hierarquia="hierarquia">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tipo="urn:tipo"
+    xmlns:hierarquia="urn:hierarquia">
     <!-- https://stackoverflow.com/questions/22774425/attempting-to-connect-xml-files-with-xinclude-attribute-xmlbase-error -->
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
-    <xs:import namespace="tipo" schemaLocation="tipos.xsd"/>
-    <xs:import namespace="hierarquia" schemaLocation="hierarquia.xsd"/>
+    <xs:import namespace="urn:tipo" schemaLocation="tipos.xsd"/>
+    <xs:import namespace="urn:hierarquia" schemaLocation="hierarquia.xsd"/>
 
     <xs:element name="guiao" type="Guiao"/>
 

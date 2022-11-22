@@ -1,7 +1,7 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<xs:schema xmlns="hierarquia" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="hierarquia" elementFormDefault="qualified" xmlns:tipo="tipo">
-    <xs:import namespace="tipo" schemaLocation="tipos.xsd"/>
+<xs:schema xmlns="urn:hierarquia" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:hierarquia" elementFormDefault="qualified" xmlns:tipo="urn:tipo">
+    <xs:import namespace="urn:tipo" schemaLocation="tipos.xsd"/>
 
     <xs:element name="conteudo" type="Conteudo"/>
 
