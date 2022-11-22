@@ -1,0 +1,40 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tipo="tipo"
+    xmlns:hierarquia="hierarquia">
+    <!-- https://stackoverflow.com/questions/22774425/attempting-to-connect-xml-files-with-xinclude-attribute-xmlbase-error -->
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
+    <xs:import namespace="tipo" schemaLocation="tipos.xsd"/>
+    <xs:import namespace="hierarquia" schemaLocation="hierarquia.xsd"/>
+
+    <xs:element name="guiao" type="Guiao"/>
+
+    <xs:complexType name="Guiao">
+        <xs:sequence>
+            <xs:element name="cabecalho" type="Cabecalho"/>
+            <xs:element name="conteudo" type="hierarquia:Conteudo"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Cabecalho">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:choice>
+                <xs:element name="autores" type="Autores"/>
+                <xs:element name="autor" type="xs:normalizedString"/>
+            </xs:choice>
+            <xs:element name="sinopse" type="xs:string"/>
+            <xs:element name="personagens" type="tipo:Personagens"/>
+            <xs:element name="aderecos" type="tipo:Aderecos"/>
+        </xs:sequence>
+        <xs:attribute name="data" type="xs:date"/>
+    </xs:complexType>
+
+    <xs:complexType name="Autores">
+        <xs:sequence>
+            <xs:element name="autor" type="xs:normalizedString" minOccurs="2" maxOccurs="unbounded"
+            />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

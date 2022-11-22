@@ -1,0 +1,53 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE guiao SYSTEM "../guiao.dtd">
+
+<guiao>
+    <cabecalho>
+        <titulo>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</titulo>
+        <autores>
+            <autor>Jorge</autor>
+            <autor>Joaquim</autor>
+        </autores>
+        <data>
+            <ano>2020</ano>
+            <mes>01</mes>
+            <dia>10</dia>
+        </data>
+        <sinopse>It is a long established fact that a reader will be distracted by the readable
+            content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+            has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+            content here', making it look like readable English. Many desktop publishing packages
+            and web page editors now use Lorem Ipsum as their default model text, and a search for
+            'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and
+            the like). </sinopse>
+        <personagens>
+            <personagem id="p1" descricao="personagem pirata malvado">Pirata</personagem>
+            <personagem id="p2" descricao="personagem capitão valente">Capitão valente</personagem>
+        </personagens>
+        <aderecos>
+            <itemAdereco id="adr1">Arma</itemAdereco>
+            <itemAdereco id="adr2">Espada</itemAdereco>
+            <itemAdereco id="adr3">Canhão</itemAdereco>
+        </aderecos>
+    </cabecalho>
+    <conteudo>
+        <temporada>
+            <personagem id="p3" descricao="personagem papagaio">Faisca</personagem>
+            <episodio>
+                <cena
+                    contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+                    > Durante uma tempestadde maritima do mar mediterraneo o <refere
+                        ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao <refere
+                        ref-personagem="p2"/> . Durante esta descoberta o <refere
+                        ref-personagem="p1"/> disse ao <refere ref-personagem="p3"/> : <fala
+                        ref-personagem="p1">
+                        <refere ref-personagem="p3"/> , buscar a minha <adereco ref-adereco="adr2"/>
+                        ! </fala>
+                    <comentario>O papagaio voa para até ela</comentario> Entretanto o <refere
+                        ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para
+                    atacar... </cena>
+            </episodio>
+        </temporada>
+    </conteudo>
+</guiao>

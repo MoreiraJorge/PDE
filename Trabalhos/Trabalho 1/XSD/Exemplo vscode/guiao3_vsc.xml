@@ -1,0 +1,53 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+
+<guiao xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../guiao.xsd" xmlns:hierarquia="hierarquia">
+    <cabecalho data="2022-01-01">
+        <titulo>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</titulo>
+        <autores>
+            <autor>Jorge</autor>
+            <autor>Joaquim</autor>
+        </autores>
+        <sinopse>It is a long established fact that a reader will be distracted by the readable
+            content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+            has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+            content here', making it look like readable English. Many desktop publishing packages
+            and web page editors now use Lorem Ipsum as their default model text, and a search for
+            'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and
+            the like). </sinopse>
+        <personagens xmlns:tipo="tipo">
+            <tipo:personagem id="p1" descricao="personagem pirata malvado">Pirata</tipo:personagem>
+            <tipo:personagem id="p2" descricao="personagem capitão valente">Capitão valente</tipo:personagem>
+        </personagens>
+        <aderecos xmlns:tipo="tipo">
+            <tipo:adereco id="adr1">Arma</tipo:adereco>
+            <tipo:adereco id="adr2">Espada</tipo:adereco>
+            <tipo:adereco id="adr3">Canhão</tipo:adereco>
+        </aderecos>
+    </cabecalho>
+    <conteudo>
+        <hierarquia:cena
+            contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+            > Durante uma tempestadde maritima do mar mediterraneo o
+            <hierarquia:refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
+            <hierarquia:refere ref-personagem="p2"/> . Durante esta descoberta o
+            <hierarquia:refere ref-personagem="p1"/> disse ao Papagaio : <hierarquia:fala
+                ref-personagem="p1"> Papagaio, vai buscar a minha
+                <hierarquia:adereco ref-adereco="adr2"/> ! </hierarquia:fala>
+            <hierarquia:comentario>O papagaio voa para até ela</hierarquia:comentario> Entretanto o
+            <hierarquia:refere ref-personagem="p2"/> preparava o seu
+            <hierarquia:adereco ref-adereco="adr3"/> para atacar... </hierarquia:cena>
+        <hierarquia:cena
+            contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+            > Durante uma tempestadde maritima do mar mediterraneo o
+            <hierarquia:refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
+            <hierarquia:refere ref-personagem="p2"/> . Durante esta descoberta o
+            <hierarquia:refere ref-personagem="p1"/> disse ao Papagaio : <hierarquia:fala
+                ref-personagem="p1"> Papagaio, vai buscar a minha , buscar a minha
+                <hierarquia:adereco ref-adereco="adr2"/> ! </hierarquia:fala>
+            <hierarquia:comentario>O papagaio voa para até ela</hierarquia:comentario> Entretanto o
+            <hierarquia:refere ref-personagem="p2"/> preparava o seu
+            <hierarquia:adereco ref-adereco="adr3"/> para atacar... </hierarquia:cena>
+    </conteudo>
+</guiao>
