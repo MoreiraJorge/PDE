@@ -1,7 +1,0 @@
-<?xml version="1.1" encoding="UTF-8"?>
-
-<aderecos xmlns:tipo="tipo">
-    <tipo:adereco id="adr1">Arma</tipo:adereco>
-    <tipo:adereco id="adr2">Espada</tipo:adereco>
-    <tipo:adereco id="adr3">Canhão</tipo:adereco>
-</aderecos>
