@@ -9,6 +9,31 @@
                         <String>enable.project.master.files.support</String>
                         <Boolean>true</Boolean>
                     </entry>
+                    <entry>
+                        <String>scenario.associations</String>
+                        <scenarioAssociation-array>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>Trabalho%201/XSD/Exemplo/guiao1.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>6/xmlspec/xmlspec.framework/XMLSpec/XML Spec HTML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                        </scenarioAssociation-array>
+                    </entry>
                 </serializableOrderedMap>
             </serialized>
         </options>

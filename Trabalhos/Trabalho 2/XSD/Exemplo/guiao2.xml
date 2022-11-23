@@ -20,7 +20,7 @@
         <xi:include href="aderecos.xml" parse="xml"/>
     </cabecalho>
     <conteudo>
-        <parte xmlns="hierarquia">
+        <parte xmlns="urn:hierarquia">
             <personagem id="p3" descricao="personagem papagaio">Faisca</personagem>
             <cena
                 contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"

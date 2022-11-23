@@ -22,6 +22,7 @@
             </xs:choice>
             <xs:element name="episodio" type="Episodio" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
+        <xs:attribute name="num-temporada" type="xs:int" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="Episodio">
@@ -36,6 +37,7 @@
                 <xs:element name="cena" type="Cena" minOccurs="1" maxOccurs="unbounded"/>
             </xs:choice>
         </xs:sequence>
+        <xs:attribute name="num-episodio" type="xs:int" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="Parte">
@@ -47,6 +49,7 @@
             </xs:choice>
             <xs:element name="cena" type="Cena" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
+        <xs:attribute name="num-parte" type="xs:int" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="Cena" mixed="true">
@@ -58,6 +61,7 @@
             <xs:element name="adereco" type="RefAdereco" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="contexto" type="xs:normalizedString"/>
+        <xs:attribute name="num-cena" type="xs:int" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="Fala" mixed="true">

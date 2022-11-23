@@ -1,4 +1,5 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl "href="../XSL/guiao.xsl" ?>
 
 <guiao xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../guiao.xsd">
@@ -20,10 +21,10 @@
         <xi:include href="aderecos.xml" parse="xml"/>
     </cabecalho>
     <conteudo>
-        <temporada xmlns="hierarquia">
+        <temporada xmlns="urn:hierarquia" num-temporada="1">
             <personagem id="p3" descricao="personagem papagaio">Faisca</personagem>
-            <episodio>
-                <cena
+            <episodio num-episodio="1">
+                <cena num-cena="1"
                     contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
                     > Durante uma tempestadde maritima do mar mediterraneo o
                     <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao

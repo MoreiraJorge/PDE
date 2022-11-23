@@ -1,0 +1,14 @@
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="html" version="4.01" encoding="UTF-8"/>
+
+    <xsl:template match="guiao">
+        <html>
+            <head>
+                <title>Trabalho 2</title>
+            </head>
+            <body>
+            </body>
+        </html>
+    </xsl:template>
+
+</xsl:stylesheet>
