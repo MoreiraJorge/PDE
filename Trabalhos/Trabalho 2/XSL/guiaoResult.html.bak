@@ -1,0 +1,105 @@
+<html xmlns:guiao="urn:guiao" xmlns:hierarquia="urn:hierarquia">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="stylesheet" type="text/css" href="page.css">
+      <title>Trabalho 2</title>
+   </head>
+   <body>
+      <div class="book">
+         <div class="page">
+            <div class="subpage">
+               <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
+               <p>Data: 2022-01-01</p>
+               <h2>Autores</h2>
+               <ul>
+                  <li>Jorge</li>
+                  <li>Joaquim</li>
+               </ul>
+               <blockquote>It is a long established fact that a reader will be distracted by the
+                  readable content of a page when looking at its layout. The point of using Lorem
+                  Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                  using 'Content here, content here', making it look like readable English. Many
+                  desktop publishing packages and web page editors now use Lorem Ipsum as their
+                  default model text, and a search for 'lorem ipsum' will uncover many web sites
+                  still in their infancy. Various versions have evolved over the years, sometimes by
+                  accident, sometimes on purpose (injected humour and the like). </blockquote>
+            </div>
+         </div>
+         <div class="page">
+            <div class="subpage">
+               <h1>parte1</h1>
+               <h2>cena1</h2>
+               <h1>parte1</h1>
+               <h2>cena1</h2>
+            </div>
+         </div>
+         <div class="page">
+            <div class="subpage">
+               <h2 class="title">Contexto</h2>
+               <h3>Sinopse</h3>
+               <blockquote>It is a long established fact that a reader will be distracted by the
+                  readable content of a page when looking at its layout. The point of using Lorem
+                  Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                  using 'Content here, content here', making it look like readable English. Many
+                  desktop publishing packages and web page editors now use Lorem Ipsum as their
+                  default model text, and a search for 'lorem ipsum' will uncover many web sites
+                  still in their infancy. Various versions have evolved over the years, sometimes by
+                  accident, sometimes on purpose (injected humour and the like). </blockquote>
+               <table xmlns:tipo="urn:tipo" class="context-table">
+                  <tr>
+                     <th>Personagens</th>
+                     <th>Adereços</th>
+                  </tr>
+                  <tr>
+                     <td class="table-column">
+                        <p>Pirata</p>
+                        <p>Capitão valente</p>
+                     </td>
+                     <td class="table-column">
+                        <p>Arma</p>
+                        <p>Espada</p>
+                        <p>Canhão</p>
+                     </td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+         <div>
+            <div xmlns:tipo="urn:tipo" class="page">
+               <div class="subpage"><a name="d5e40">
+                     <h1> Parte 1</h1></a><table class="context-table">
+                     <tr>
+                        <th>Personagens</th>
+                     </tr>
+                     <tr>
+                        <td class="table-column">
+                           <p>Faisca</p>
+                        </td>
+                     </tr>
+                  </table>
+                  <h2> Cena 1</h2> Durante uma tempestadde maritima do mar mediterraneo o avistou um
+                  navio à distãncia que pertencia ao . Durante esta descoberta o disse ao : , buscar
+                  a minha ! O papagaio voa para até ela Entretanto o preparava o seu para atacar...
+               </div>
+            </div>
+            <div xmlns:tipo="urn:tipo" class="page">
+               <div class="subpage"><a name="d5e74">
+                     <h1> Parte 2</h1></a><table class="context-table">
+                     <tr>
+                        <th>Personagens</th>
+                     </tr>
+                     <tr>
+                        <td class="table-column">
+                           <p>Faisca 2</p>
+                        </td>
+                     </tr>
+                  </table>
+                  <h2> Cena 1</h2> Durante uma tempestadde maritima do mar mediterraneo o avistou um
+                  navio à distãncia que pertencia ao . Durante esta descoberta o disse ao : , buscar
+                  a minha ! O papagaio voa para até ela Entretanto o preparava o seu para atacar...
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

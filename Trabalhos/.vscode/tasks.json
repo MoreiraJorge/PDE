@@ -2,17 +2,19 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "xslt-js",
-			"label": "xslt-js: Saxon-JS Transform (New)",
-			"xsltFile": "${file}",
-			"xmlSource": "${file}",
+			"type": "xslt",
+			"label": "xslt: Saxon Transform (New)",
+			"saxonJar": "${config:XSLT.tasks.saxonJar}",
+			"xsltFile": "${workspaceFolder}/Trabalho2/XSL/guiao.xslt",
+			"xmlSource": "${workspaceFolder}/Trabalho2/DTD/Exemplo/guiao1.xml",
 			"resultPath": "${workspaceFolder}/xslt-out/result1.xml",
+			"allowSyntaxExtensions40": "off",
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			},
 			"problemMatcher": [
-				"$saxon-xslt-js"
+				"$saxon-xslt"
 			]
 		}
 	]
