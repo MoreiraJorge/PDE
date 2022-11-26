@@ -10,7 +10,6 @@ body {
 }
 .page {
     width: 21cm;
-    min-height: 29.7cm;
     padding: 2cm;
     margin: 1cm auto;
     border: 1px #D3D3D3 solid;
@@ -21,7 +20,6 @@ body {
 .subpage {
     padding: 1cm;
     box-shadow: initial;
-    height: 256mm;
     outline: 2cm #FAFAFA solid;
 }
 
@@ -45,6 +43,23 @@ body {
 
 .table-column p {
     margin: 2px 0px;
+}
+
+.context {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.speech .uppercase {
+    text-transform: none;
+}
+
+.prop {
+    font-weight: bold;
 }
 
 @page {

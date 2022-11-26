@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:hierarquia="urn:hierarquia"
+<xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:hierarquia="urn:hierarquia" xmlns:tipo="urn:tipo"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html" version="4.01" encoding="UTF-8" indent="yes"/>
     <xsl:include href="indice.xsl"/>
     <xsl:include href="corpo.xsl"/>
     <xsl:include href="utils.xsl"/>
+
+    <xsl:key name="ref-personagem" match="tipo:personagem" use="@id"/>
+    <xsl:key name="ref-adereco" match="tipo:adereco" use="@id"/>
 
     <xsl:template match="guiao:guiao">
 

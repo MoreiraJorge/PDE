@@ -33,7 +33,7 @@
             > Durante uma tempestadde maritima do mar mediterraneo o <refere ref-personagem="p1"/>
             avistou um navio à distãncia que pertencia ao <refere ref-personagem="p2"/> . Durante
             esta descoberta o <refere ref-personagem="p1"/> disse ao Papagaio : <fala
-                ref-personagem="p1"> Papagaio, vai buscar a minha , buscar a minha <adereco
+                ref-personagem="p1"> Papagaio, vai buscar a minha <adereco
                     ref-adereco="adr2"/> ! </fala>
             <comentario>O papagaio voa para até ela</comentario> Entretanto o <refere
                 ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para atacar...

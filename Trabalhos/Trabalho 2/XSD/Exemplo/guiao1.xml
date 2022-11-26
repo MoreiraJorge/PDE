@@ -47,6 +47,18 @@
                 <personagens>
                     <personagem id="p8" descricao="Guna de gaia" xmlns="urn:tipo">Gaja guna</personagem>
                 </personagens>
+                <cena num-cena="1"
+                    contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+                    > OUTRO Durante uma tempestadde maritima do mar mediterraneo o
+                    <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
+                    <refere ref-personagem="p2"/> . Durante esta descoberta o
+                    <refere ref-personagem="p1"/> disse ao <refere ref-personagem="p3"/> : <fala
+                        ref-personagem="p1">
+                        <refere ref-personagem="p3"/> , buscar a minha <adereco ref-adereco="adr2"/>
+                        ! </fala>
+                    <comentario>O papagaio voa para até ela</comentario> Entretanto o
+                    <refere ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para
+                    atacar... </cena>
                 <cena num-cena="2"
                     contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
                     > OUTRO Durante uma tempestadde maritima do mar mediterraneo o
@@ -62,11 +74,23 @@
             </episodio>
         </temporada>
         <temporada xmlns="urn:hierarquia" num-temporada="2">
-            <episodio num-episodio="2">
+            <episodio num-episodio="1">
                 <personagens>
                     <personagem id="p12" descricao="personagem Altamente" xmlns="urn:tipo">personagem Altamente</personagem>
                     <personagem id="p13" descricao="MIECAAOOO" xmlns="urn:tipo">Rafa</personagem>
                 </personagens>
+                <cena num-cena="1"
+                    contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+                    > Durante uma tempestadde maritima do mar mediterraneo o
+                    <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
+                    <refere ref-personagem="p2"/> . Durante esta descoberta o
+                    <refere ref-personagem="p1"/> disse ao <refere ref-personagem="p3"/> : <fala
+                        ref-personagem="p1">
+                        <refere ref-personagem="p3"/> , buscar a minha <adereco ref-adereco="adr2"/>
+                        ! </fala>
+                    <comentario>O papagaio voa para até ela</comentario> Entretanto o
+                    <refere ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para
+                    atacar... </cena>
                 <cena num-cena="2"
                     contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
                     > Durante uma tempestadde maritima do mar mediterraneo o
@@ -76,6 +100,18 @@
                         ref-personagem="p1">
                         <refere ref-personagem="p3"/> , buscar a minha <adereco ref-adereco="adr2"/>
                         ! </fala>
+                    <comentario>O papagaio voa para até ela</comentario> Entretanto o
+                    <refere ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para
+                    atacar... </cena>
+                <cena num-cena="3"
+                    contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+                    > Durante uma tempestadde maritima do mar mediterraneo o
+                    <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
+                    <refere ref-personagem="p2"/> . Durante esta descoberta o
+                    <refere ref-personagem="p1"/> disse ao <refere ref-personagem="p3"/> : <fala
+                        ref-personagem="p1">
+                        <refere ref-personagem="p3"/> , buscar a minha <adereco ref-adereco="adr2"/>
+                        ! mas <refere ref-personagem="p3"/> não caias ao chão.</fala>
                     <comentario>O papagaio voa para até ela</comentario> Entretanto o
                     <refere ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para
                     atacar... </cena>
