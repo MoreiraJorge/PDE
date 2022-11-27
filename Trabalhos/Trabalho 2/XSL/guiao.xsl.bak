@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:hierarquia="urn:hierarquia"
+<xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:hierarquia="urn:hierarquia" xmlns:tipo="urn:tipo"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html" version="4.01" encoding="UTF-8" indent="yes"/>
     <xsl:include href="indice.xsl"/>
     <xsl:include href="corpo.xsl"/>
     <xsl:include href="utils.xsl"/>
+    <xsl:include href="rules/rule1.xsl"/>
+    <xsl:include href="rules/rule2.xsl"/>
+
+    <xsl:key name="ref-personagem" match="tipo:personagem" use="@id"/>
+    <xsl:key name="ref-adereco" match="tipo:adereco" use="@id"/>
 
     <xsl:template match="guiao:guiao">
+        <xsl:apply-templates select="//hierarquia:cena" mode="validate-references"/>
+        <!--<xsl:apply-templates select="./node()" mode="validate-existances"/> -->
 
         <html>
             <head>
@@ -35,7 +42,9 @@
                                 <xsl:value-of select="guiao:cabecalho/guiao:sinopse"/>
                             </blockquote>
                             <xsl:apply-templates select="guiao:cabecalho"
-                                mode="personagens-aderecos"/>
+                                mode="personagens-aderecos">
+                                <xsl:with-param name="path">.</xsl:with-param>
+                            </xsl:apply-templates>
                         </div>
                     </div>
                     <div>

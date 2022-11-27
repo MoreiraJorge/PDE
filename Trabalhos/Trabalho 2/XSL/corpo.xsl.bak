@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:hierarquia="urn:hierarquia" xmlns:tipo="urn:tipo" version="1.0">
+    <xsl:include href="cena.xsl"/>
 
     <xsl:template match="guiao:conteudo" mode="corpo">
         <xsl:param name="depth"/>
@@ -13,6 +14,9 @@
             <xsl:with-param name="depth" select="$depth"/>
         </xsl:apply-templates>
 
+        <xsl:apply-templates select="hierarquia:cena">
+            <xsl:with-param name="depth" select="$depth"/>
+        </xsl:apply-templates>
 
     </xsl:template>
 
@@ -39,29 +43,6 @@
         <xsl:apply-templates select="hierarquia:cena">
             <xsl:with-param name="depth" select="$depth + 1"/>
         </xsl:apply-templates>
-    </xsl:template>
-
-    <xsl:template match="hierarquia:cena">
-        <xsl:param name="depth"/>
-        
-        <xsl:choose>
-            <xsl:when test="$depth = 1">
-                <div class="page">
-                    <div class="subpage">
-                        <xsl:element name="h{$depth}"> Cena <xsl:value-of select="@num-cena"
-                        /></xsl:element>
-                        <xsl:apply-templates/>
-                    </div>
-                </div>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:element name="h{$depth}"> Cena <xsl:value-of select="@num-cena"
-                /></xsl:element>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
-        
-        
     </xsl:template>
 
     <xsl:template match="hierarquia:personagens">

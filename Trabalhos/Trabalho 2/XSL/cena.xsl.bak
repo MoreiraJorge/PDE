@@ -18,7 +18,7 @@
                         <span class="context">
                             <xsl:value-of select="$contexto"/>
                         </span>
-
+                        
                         <xsl:element name="p"/>
                         <xsl:apply-templates/>
                     </div>

@@ -49,16 +49,17 @@
                 </personagens>
                 <cena num-cena="1"
                     contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
-                    > OUTRO Durante uma tempestadde maritima do mar mediterraneo o
+                    >
+                    OUTRO Durante uma tempestadde maritima do mar mediterraneo o
                     <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
                     <refere ref-personagem="p2"/> . Durante esta descoberta o
                     <refere ref-personagem="p1"/> disse ao <refere ref-personagem="p3"/> : <fala
-                        ref-personagem="p1">
+                        ref-personagem="adr1">
                         <refere ref-personagem="p3"/> , buscar a minha <adereco ref-adereco="adr2"/>
                         ! </fala>
                     <comentario>O papagaio voa para até ela</comentario> Entretanto o
-                    <refere ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para
-                    atacar... </cena>
+                    <refere ref-personagem="adr3"/> preparava o seu <adereco ref-adereco="p2"/> para
+                    atacar... <refere ref-personagem="adr2"/> </cena>
                 <cena num-cena="2"
                     contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
                     > OUTRO Durante uma tempestadde maritima do mar mediterraneo o
@@ -110,7 +111,7 @@
                         <refere ref-personagem="p3"/> , buscar a minha <adereco ref-adereco="adr2"/>
                         ! </fala>
                     <comentario>O papagaio voa para até ela</comentario> Entretanto o
-                    <refere ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para
+                    <refere ref-personagem="p2"/> preparava o seu <adereco ref-adereco="p1"/> para
                     atacar... </cena>
                 <cena num-cena="3"
                     contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
