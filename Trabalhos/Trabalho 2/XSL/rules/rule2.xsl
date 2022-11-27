@@ -7,10 +7,10 @@
 
   <!-- Rule to validate if all characters are used -->
   <xsl:template match="//guiao:personagens | //hierarquia:personagens" mode="validate-existances">
-    <xsl:apply-templates mode="validate-existances"/>
+    <xsl:apply-templates mode="validate-existance"/>
   </xsl:template>
 
-  <xsl:template match="tipo:personagem" mode="validate-existances">
+  <xsl:template match="tipo:personagem" mode="validate-existance">
     <xsl:if test="not(key('id', @id))">
       <xsl:message terminate="no">A personagem <xsl:value-of select="@id"/> não está referênciada ao longo do documento.</xsl:message>
     </xsl:if>

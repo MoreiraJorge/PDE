@@ -7,6 +7,7 @@
     <xsl:include href="utils.xsl"/>
     <xsl:include href="rules/rule1.xsl"/>
     <xsl:include href="rules/rule2.xsl"/>
+    <xsl:include href="rules/rule3.xsl"/>
 
     <xsl:key name="ref-personagem" match="tipo:personagem" use="@id"/>
     <xsl:key name="ref-adereco" match="tipo:adereco" use="@id"/>
@@ -15,6 +16,7 @@
         <xsl:apply-templates select="//hierarquia:cena" mode="validate-references"/>
         <xsl:apply-templates select="//guiao:personagens | //hierarquia:personagens"
             mode="validate-existances"/>
+        <xsl:apply-templates select="//guiao:aderecos" mode="validate-existances"/>
         
         <html>
             <head>
