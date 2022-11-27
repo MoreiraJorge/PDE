@@ -13,14 +13,14 @@
             </tr>
             <tr>
                 <td class="table-column">
-                    <xsl:for-each select="guiao:personagens/tipo:personagem">
+                    <xsl:for-each select="//tipo:personagem">
                         <p>
                             <xsl:value-of select="self::node()"/>
                         </p>
                     </xsl:for-each>
                 </td>
                 <td class="table-column">
-                    <xsl:for-each select="guiao:aderecos/tipo:adereco">
+                    <xsl:for-each select="//tipo:adereco">
                         <p>
                             <xsl:value-of select="self::node()"/>
                         </p>
@@ -40,7 +40,7 @@
             <tr>
                 <td class="table-column">
                     <xsl:for-each
-                        select="(//hierarquia:refere | //hierarquia:fala)/key('ref-personagem', @ref-personagem)/text()[generate-id() = generate-id(key('personagem-tipo', .)[1])]">
+                        select="(hierarquia:refere | hierarquia:fala | hierarquia:fala/hierarquia:refere)/key('ref-personagem', @ref-personagem)/text()[generate-id() = generate-id(key('personagem-tipo', .)[1])]">
                         <p>
                             <xsl:value-of select="."/>
                         </p>
@@ -48,7 +48,7 @@
                 </td>
                 <td class="table-column">
                     <xsl:for-each
-                        select="//hierarquia:adereco/key('ref-adereco', @ref-adereco)/text()[generate-id() = generate-id(key('adereco-tipo', .)[1])]">
+                        select="(hierarquia:adereco | hierarquia:fala/hierarquia:adereco)/key('ref-adereco', @ref-adereco)/text()[generate-id() = generate-id(key('adereco-tipo', .)[1])]">
                         <p>
                             <xsl:value-of select="."/>
                         </p>
