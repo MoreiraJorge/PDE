@@ -1,9 +1,7 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<xs:schema elementFormDefault="qualified"
-    targetNamespace="urn:tipo"
-    xmlns:tipo="urn:tipo" 
+<xs:schema elementFormDefault="qualified" targetNamespace="urn:tipo" xmlns:tipo="urn:tipo"
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    
+
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
 
@@ -18,7 +16,8 @@
 
     <xs:complexType name="Personagens">
         <xs:sequence>
-            <xs:element name="personagem" type="tipo:Personagem" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="personagem" type="tipo:Personagem" minOccurs="1" maxOccurs="unbounded"
+            />
         </xs:sequence>
         <xs:attribute ref="xml:base"/>
     </xs:complexType>
