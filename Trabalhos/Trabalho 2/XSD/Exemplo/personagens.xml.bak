@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<personagens xmlns="urn:guiao" xmlns:tipo="urn:tipo">
-    <tipo:personagem id="p1" descricao="personagem pirata malvado">Pirata</tipo:personagem>
-    <tipo:personagem id="p2" descricao="personagem capitão valente">Capitão
-        valente</tipo:personagem>
-</personagens>
