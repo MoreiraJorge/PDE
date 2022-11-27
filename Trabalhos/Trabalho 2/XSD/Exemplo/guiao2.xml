@@ -24,7 +24,7 @@
             <personagens>
                 <personagem id="p3" descricao="personagem papagaio" xmlns="urn:tipo">Faisca</personagem>
             </personagens>
-            <cena num-cena="1"
+            <cena
                 contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
                 > Durante uma tempestadde maritima do mar mediterraneo o
                 <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
@@ -40,7 +40,7 @@
             <personagens>
                 <personagem id="p4" descricao="personagem papagaio" xmlns="urn:tipo">Faisca 2</personagem>
             </personagens>
-            <cena num-cena="1"
+            <cena
                 contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
                 > Durante uma tempestadde maritima do mar mediterraneo o
                 <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao

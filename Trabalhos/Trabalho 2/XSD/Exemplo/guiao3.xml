@@ -20,7 +20,7 @@
         <xi:include href="aderecos.xml" parse="xml"/>
     </cabecalho>
     <conteudo>
-        <cena num-cena="1" xmlns="urn:hierarquia"
+        <cena xmlns="urn:hierarquia"
             contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
             > Durante uma tempestadde maritima do mar mediterraneo o <refere ref-personagem="p1"/>
             avistou um navio à distãncia que pertencia ao <refere ref-personagem="p2"/> . Durante
@@ -28,7 +28,7 @@
                 ref-personagem="p1"> Papagaio, vai buscar a minha <adereco ref-adereco="adr2"/> ! </fala>
             <comentario>O papagaio voa para até ela</comentario> Entretanto o <refere
                 ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para atacar... </cena>
-        <cena num-cena="2" xmlns="urn:hierarquia"
+        <cena xmlns="urn:hierarquia"
             contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
             > Durante uma tempestadde maritima do mar mediterraneo o <refere ref-personagem="p1"/>
             avistou um navio à distãncia que pertencia ao <refere ref-personagem="p2"/> . Durante
