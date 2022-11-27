@@ -19,8 +19,8 @@
                         <span class="context">
                             <xsl:value-of select="$contexto"/>
                         </span>
-
                         <xsl:element name="p"/>
+                        <xsl:apply-templates select="current()" mode="personagens-aderecos-cena"/>
                         <xsl:apply-templates/>
                     </div>
                 </div>
@@ -35,6 +35,7 @@
                     <xsl:value-of select="$contexto"/>
                 </span>
                 <xsl:element name="p"/>
+                <xsl:apply-templates select="current()" mode="personagens-aderecos-cena"/>
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>

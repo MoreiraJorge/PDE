@@ -81,15 +81,8 @@
                     <personagem id="p13" descricao="MIECAAOOO" xmlns="urn:tipo">Rafa</personagem>
                 </personagens>
                 <cena
-                    contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente">
-                    <personagens>
-                        <personagem id="p17" descricao="personagem Fantastica" xmlns="urn:tipo">personagem Fantastica</personagem>
-                        <personagem id="p18" descricao="personagem feia" xmlns="urn:tipo">personagem Feia</personagem>
-                    </personagens>
-                    <aderecos>
-                        <adereco id="adr4" xmlns="urn:tipo">Bastão</adereco>
-                        <adereco id="adr5" xmlns="urn:tipo">Martelo</adereco>
-                    </aderecos> Durante uma tempestadde maritima do mar mediterraneo o
+                    contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+                    > Durante uma tempestadde maritima do mar mediterraneo o
                     <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
                     <refere ref-personagem="p2"/> . Durante esta descoberta o
                     <refere ref-personagem="p1"/> disse ao <refere ref-personagem="p3"/> : <fala
@@ -115,13 +108,13 @@
                     contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
                     > Durante uma tempestadde maritima do mar mediterraneo o
                     <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
-                    <refere ref-personagem="p2"/> . Durante esta descoberta o
+                    <refere ref-personagem="p3"/> . Durante esta descoberta o
                     <refere ref-personagem="p1"/> disse ao <refere ref-personagem="p3"/> : <fala
-                        ref-personagem="p1">
+                        ref-personagem="p2">
                         <refere ref-personagem="p3"/> , buscar a minha <adereco ref-adereco="adr2"/>
                         ! mas <refere ref-personagem="p3"/> não caias ao chão.</fala>
                     <comentario>O papagaio voa para até ela</comentario> Entretanto o
-                    <refere ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para
+                    <refere ref-personagem="p3"/> preparava o seu <adereco ref-adereco="adr3"/> para
                     atacar... </cena>
             </episodio>
         </temporada>
