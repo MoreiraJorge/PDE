@@ -6,21 +6,21 @@
     <xsl:template match="guiao:conteudo" mode="corpo">
         <xsl:param name="depth"/>
 
-        <xsl:apply-templates select="hierarquia:temporada">
+        <xsl:apply-templates select="hierarquia:temporada" mode="corpo">
             <xsl:with-param name="depth" select="$depth"/>
         </xsl:apply-templates>
 
-        <xsl:apply-templates select="hierarquia:parte">
+        <xsl:apply-templates select="hierarquia:parte" mode="corpo">
             <xsl:with-param name="depth" select="$depth"/>
         </xsl:apply-templates>
 
-        <xsl:apply-templates select="hierarquia:cena">
+        <xsl:apply-templates select="hierarquia:cena" mode="corpo">
             <xsl:with-param name="depth" select="$depth"/>
         </xsl:apply-templates>
 
     </xsl:template>
 
-    <xsl:template match="hierarquia:temporada">
+    <xsl:template match="hierarquia:temporada" mode="corpo">
         <xsl:param name="depth"/>
         <div class="page">
             <div class="subpage">
@@ -29,18 +29,20 @@
                     </xsl:element>
                 </a>
                 <xsl:apply-templates select="hierarquia:personagens"/>
-                <xsl:apply-templates select="hierarquia:episodio">
+                <xsl:apply-templates select="hierarquia:episodio" mode="corpo">
                     <xsl:with-param name="depth" select="$depth + 1"/>
                 </xsl:apply-templates>
             </div>
         </div>
     </xsl:template>
 
-    <xsl:template match="hierarquia:episodio">
+    <xsl:template match="hierarquia:episodio" mode="corpo">
         <xsl:param name="depth"/>
-        <xsl:element name="h{$depth}"> Episódio <xsl:value-of select="@num-episodio"/></xsl:element>
+        <a name="{generate-id()}">
+            <xsl:element name="h{$depth}"> Episódio <xsl:number format="1"/></xsl:element>
+        </a>
         <xsl:apply-templates select="hierarquia:personagens"/>
-        <xsl:apply-templates select="hierarquia:cena">
+        <xsl:apply-templates select="hierarquia:cena" mode="corpo">
             <xsl:with-param name="depth" select="$depth + 1"/>
         </xsl:apply-templates>
     </xsl:template>
@@ -62,7 +64,7 @@
         </table>
     </xsl:template>
 
-    <xsl:template match="hierarquia:parte">
+    <xsl:template match="hierarquia:parte" mode="corpo">
         <xsl:param name="depth"/>
         <div class="page">
             <div class="subpage">
@@ -71,7 +73,7 @@
                     </xsl:element>
                 </a>
                 <xsl:apply-templates select="hierarquia:personagens"/>
-                <xsl:apply-templates select="hierarquia:cena">
+                <xsl:apply-templates select="hierarquia:cena" mode="corpo">
                     <xsl:with-param name="depth" select="$depth + 1"/>
                 </xsl:apply-templates>
             </div>

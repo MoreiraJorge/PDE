@@ -13,8 +13,9 @@
 
     <xsl:template match="guiao:guiao">
         <xsl:apply-templates select="//hierarquia:cena" mode="validate-references"/>
-        <!--<xsl:apply-templates select="./node()" mode="validate-existances"/> -->
-
+        <xsl:apply-templates select="//guiao:personagens | //hierarquia:personagens"
+            mode="validate-existances"/>
+        
         <html>
             <head>
                 <link rel="stylesheet" type="text/css" href="page.css"/>

@@ -52,7 +52,7 @@
             <xsl:with-param name="depth" select="$depth + 1"/>
         </xsl:apply-templates>
     </xsl:template>
-    
+
     <xsl:template match="hierarquia:cena" mode="indice">
         <xsl:param name="depth"/>
         <xsl:element name="h{$depth}">

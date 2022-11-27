@@ -13,8 +13,8 @@
 
     <xsl:template match="guiao:guiao">
         <xsl:apply-templates select="//hierarquia:cena" mode="validate-references"/>
-        <!--<xsl:apply-templates select="./node()" mode="validate-existances"/> -->
-
+        <xsl:apply-templates select="//guiao:personagens | //hierarquia:personagens"
+            mode="validate-existances"/>
         <html>
             <head>
                 <link rel="stylesheet" type="text/css" href="page.css"/>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="page">
                         <div class="subpage">
-                            <xsl:apply-templates select="guiao:conteudo/*" mode="indice">
+                            <xsl:apply-templates select="guiao:conteudo" mode="indice">
                                 <xsl:with-param name="depth" select="1"/>
                             </xsl:apply-templates>
                         </div>

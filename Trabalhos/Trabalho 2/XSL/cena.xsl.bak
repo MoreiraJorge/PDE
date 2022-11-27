@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:hierarquia="urn:hierarquia" xmlns:tipo="urn:tipo" version="1.0">
 
-    <xsl:template match="hierarquia:cena">
+    <xsl:template match="hierarquia:cena" mode="corpo">
         <xsl:param name="depth"/>
 
         <xsl:variable name="contexto" select="@contexto"/>
@@ -12,13 +12,14 @@
                 <div class="page">
                     <div class="subpage">
                         <xsl:element name="h{$depth}">
-                            <xsl:attribute name="class"> scene-title </xsl:attribute> Cena
-                                <xsl:value-of select="@num-cena"/>
+                            <xsl:attribute name="class"> schene-title </xsl:attribute>
+                            <a name="{generate-id()}"> Cena <xsl:number format="1"/>
+                            </a>
                         </xsl:element>
                         <span class="context">
                             <xsl:value-of select="$contexto"/>
                         </span>
-                        
+
                         <xsl:element name="p"/>
                         <xsl:apply-templates/>
                     </div>
@@ -26,8 +27,9 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:element name="h{$depth}">
-                    <xsl:attribute name="class"> scene-title </xsl:attribute>Cena <xsl:value-of
-                        select="@num-cena"/>
+                    <xsl:attribute name="class"> schene-title </xsl:attribute>
+                    <a name="{generate-id()}"> Cena <xsl:number format="1"/>
+                    </a>
                 </xsl:element>
                 <span class="context">
                     <xsl:value-of select="$contexto"/>
