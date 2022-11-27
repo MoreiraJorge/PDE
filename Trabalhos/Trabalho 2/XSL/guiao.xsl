@@ -29,7 +29,7 @@
                     </div>
                     <div class="page">
                         <div class="subpage">
-                            <xsl:apply-templates select="guiao:conteudo/*" mode="indice">
+                            <xsl:apply-templates select="guiao:conteudo" mode="indice">
                                 <xsl:with-param name="depth" select="1"/>
                             </xsl:apply-templates>
                         </div>
