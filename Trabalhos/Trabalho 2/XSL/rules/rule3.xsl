@@ -6,7 +6,6 @@
 
   <!-- Rule to validate if all props are used -->
   <xsl:template match="//guiao:aderecos" mode="validate-existances">
-    <h1>Entrou</h1>
     <xsl:apply-templates mode="validate-existance"/>
   </xsl:template>
 
