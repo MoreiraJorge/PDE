@@ -81,7 +81,16 @@
                 </personagens>
                 <cena num-cena="1"
                     contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
-                    > Durante uma tempestadde maritima do mar mediterraneo o
+                    >
+                    <personagens>
+                        <personagem id="p17" descricao="personagem Fantastica" xmlns="urn:tipo">personagem Fantastica</personagem>
+                        <personagem id="p18" descricao="personagem feia" xmlns="urn:tipo">personagem Feia</personagem>
+                    </personagens>
+                    <aderecos>
+                        <adereco id="adr4" xmlns="urn:tipo">Bastão</adereco>
+                        <adereco id="adr5" xmlns="urn:tipo">Martelo</adereco>
+                    </aderecos>
+                    Durante uma tempestadde maritima do mar mediterraneo o
                     <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
                     <refere ref-personagem="p2"/> . Durante esta descoberta o
                     <refere ref-personagem="p1"/> disse ao <refere ref-personagem="p3"/> : <fala

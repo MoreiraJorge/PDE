@@ -38,7 +38,9 @@
                                 <xsl:value-of select="guiao:cabecalho/guiao:sinopse"/>
                             </blockquote>
                             <xsl:apply-templates select="guiao:cabecalho"
-                                mode="personagens-aderecos"/>
+                                mode="personagens-aderecos">
+                                <xsl:with-param name="path">.</xsl:with-param>
+                            </xsl:apply-templates>
                         </div>
                     </div>
                     <div>

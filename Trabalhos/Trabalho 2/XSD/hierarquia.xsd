@@ -46,6 +46,8 @@
 
     <xs:complexType name="Cena" mixed="true">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="personagens" type="tipo:Personagens" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="aderecos" type="tipo:Aderecos" minOccurs="0" maxOccurs="1"/>
             <xs:element name="fala" type="hierarquia:Fala" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="comentario" type="xs:normalizedString" minOccurs="0"
                 maxOccurs="unbounded"/>

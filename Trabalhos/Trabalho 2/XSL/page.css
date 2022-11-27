@@ -30,6 +30,7 @@ body {
 
 .context-table {
     margin-top: 20px;
+    margin-bottom: 20px;
     position: relative;
     text-align: center;
     width: 100%;
@@ -52,6 +53,18 @@ body {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.schene-title {
+    margin-bottom: 5px;
+}
+
+.character {
+    margin-left: 11cm;
+}
+
+.speech {
+    margin-left: 7cm;
 }
 
 .speech .uppercase {
