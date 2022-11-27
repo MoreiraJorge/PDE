@@ -4,4 +4,5 @@
     <tipo:personagem id="p1" descricao="personagem pirata malvado">Pirata</tipo:personagem>
     <tipo:personagem id="p2" descricao="personagem capitão valente">Capitão
         valente</tipo:personagem>
+    <personagem id="p7" descricao="personagem andorinha" xmlns="urn:tipo">Faisca amarelo</personagem>
 </personagens>

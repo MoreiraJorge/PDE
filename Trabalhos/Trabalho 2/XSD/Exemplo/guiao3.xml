@@ -1,4 +1,5 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl "href="../XSL/guiao.xsl" ?>
 
 <guiao xmlns="urn:guiao" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../guiao.xsd">
@@ -21,22 +22,24 @@
     </cabecalho>
     <conteudo>
         <cena xmlns="urn:hierarquia"
-            contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
-            > Durante uma tempestadde maritima do mar mediterraneo o <refere ref-personagem="p1"/>
+            contexto="Durante uma navegação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+            > Durante uma tempestade marítima do mar mediterrãneo o <refere ref-personagem="p1"/>
             avistou um navio à distãncia que pertencia ao <refere ref-personagem="p2"/> . Durante
-            esta descoberta o <refere ref-personagem="p1"/> disse ao Papagaio : <fala
-                ref-personagem="p1"> Papagaio, vai buscar a minha <adereco ref-adereco="adr2"/> ! </fala>
-            <comentario>O papagaio voa para até ela</comentario> Entretanto o <refere
-                ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para atacar... </cena>
+            esta descoberta o <refere ref-personagem="p1"/> disse ao <refere ref-personagem="p7"/> :
+                <fala ref-personagem="p1">
+                <refere ref-personagem="p7"/> , vai buscar a minha <adereco ref-adereco="adr2"/> ! </fala>
+            <comentario>O papagaio voa até à espada</comentario> Entretanto o
+            <refere ref-personagem="p2"/> preparava o seu <adereco ref-adereco="p1"/> para atacar... </cena>
         <cena xmlns="urn:hierarquia"
-            contexto="Durante uma navregação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
-            > Durante uma tempestadde maritima do mar mediterraneo o <refere ref-personagem="p1"/>
+            contexto="Durante uma navegação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+            > Durante uma tempestadde marítima do mar mediterraneo o <refere ref-personagem="p1"/>
             avistou um navio à distãncia que pertencia ao <refere ref-personagem="p2"/> . Durante
-            esta descoberta o <refere ref-personagem="p1"/> disse ao Papagaio : <fala
-                ref-personagem="p1"> Papagaio, vai buscar a minha <adereco
-                    ref-adereco="adr2"/> ! </fala>
-            <comentario>O papagaio voa para até ela</comentario> Entretanto o <refere
-                ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para atacar...
-        </cena>
+            esta descoberta o <refere ref-personagem="p1"/> disse ao <refere ref-personagem="p7"/> :
+                <fala ref-personagem="p2">
+                <refere ref-personagem="p7"/> , vai buscar a minha <adereco ref-adereco="adr2"/> !
+                mas <refere ref-personagem="p7"/> não caias ao chão.</fala>
+            <comentario>O papagaio voa até à espada</comentario> Entretanto o
+            <refere ref-personagem="p2"/> preparava o seu <adereco ref-adereco="adr3"/> para
+            atacar... </cena>
     </conteudo>
 </guiao>
