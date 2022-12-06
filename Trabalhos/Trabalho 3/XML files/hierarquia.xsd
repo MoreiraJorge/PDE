@@ -1,0 +1,86 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="urn:hierarquia"
+    xmlns:hierarquia="urn:hierarquia" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tipo="urn:tipo">
+
+    <xs:import namespace="urn:tipo" schemaLocation="tipos.xsd"/>
+
+    <xs:element name="conteudo" type="hierarquia:Conteudo"/>
+
+    <xs:complexType name="Conteudo">
+        <xs:choice>
+            <xs:element name="temporada" type="hierarquia:Temporada" minOccurs="1"
+                maxOccurs="unbounded"/>
+            <xs:element name="parte" type="hierarquia:Parte" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="cena" type="hierarquia:Cena" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="Temporada">
+        <xs:sequence>
+            <xs:element name="personagens" type="tipo:Personagens" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="episodio" type="hierarquia:Episodio" minOccurs="1"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="num-temporada" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Episodio">
+        <xs:sequence>
+            <xs:element name="personagens" type="tipo:Personagens" minOccurs="0" maxOccurs="1"/>
+            <xs:choice>
+                <xs:element name="parte" type="hierarquia:Parte" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="cena" type="hierarquia:Cena" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="num-episodio" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Parte">
+        <xs:sequence>
+            <xs:element name="personagens" type="tipo:Personagens" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="cena" type="hierarquia:Cena" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="num-parte" type="xs:int" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Cena" mixed="true">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="fala" type="hierarquia:Fala" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="comentario" type="xs:normalizedString" minOccurs="0"
+                maxOccurs="unbounded"/>
+            <xs:element name="refere" type="hierarquia:RefPersonagem" minOccurs="0"
+                maxOccurs="unbounded"/>
+            <xs:element name="adereco" type="hierarquia:RefAdereco" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="contexto" type="xs:normalizedString"/>
+    </xs:complexType>
+
+    <xs:complexType name="Fala" mixed="true">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="refere" type="hierarquia:RefPersonagem" minOccurs="0"
+                maxOccurs="unbounded"/>
+            <xs:element name="adereco" type="hierarquia:RefAdereco" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="ref-personagem" type="xs:IDREF"/>
+    </xs:complexType>
+
+    <xs:complexType name="RefPersonagem">
+        <xs:simpleContent>
+            <xs:extension base="xs:normalizedString">
+                <xs:attribute name="ref-personagem" type="xs:IDREF"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="RefAdereco">
+        <xs:simpleContent>
+            <xs:extension base="xs:normalizedString">
+                <xs:attribute name="ref-adereco" type="xs:IDREF"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

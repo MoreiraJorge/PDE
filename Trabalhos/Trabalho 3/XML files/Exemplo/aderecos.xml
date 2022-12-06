@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aderecos xmlns="urn:guiao" xmlns:tipo="urn:tipo">
+    <tipo:adereco id="adr1">Arma</tipo:adereco>
+    <tipo:adereco id="adr2">Espada</tipo:adereco>
+    <tipo:adereco id="adr3">Canhão</tipo:adereco>
+    <tipo:adereco id="adr4">Pedra</tipo:adereco>
+    <tipo:adereco id="adr5">Árvore</tipo:adereco>
+    <tipo:adereco id="adr6">Mota aquática</tipo:adereco>
+</aderecos>
