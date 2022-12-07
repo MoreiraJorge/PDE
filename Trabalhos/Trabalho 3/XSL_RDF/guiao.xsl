@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:hierarquia="urn:hierarquia" version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:g="http://www.guiao.pt/">
+
+  <xsl:include href="cabecalho.xsl"/>
+  <xsl:include href="indice.xsl"/>
+
+  <xsl:template match="guiao:guiao">
+    <rdf:RDF>
+      <!-- Perguntar dos abouts -->
+      <g:script rdf:about="Header" dc:date="{guiao:cabecalho/@data}"
+        dc:title="{guiao:cabecalho/guiao:titulo}" g:synopsis="{guiao:cabecalho/guiao:sinopse}">
+
+        <xsl:apply-templates select="guiao:cabecalho/guiao:autores"/>
+        <xsl:apply-templates select="guiao:cabecalho/guiao:personagens"/>
+        <xsl:apply-templates select="guiao:cabecalho/guiao:aderecos"/>
+
+        <xsl:apply-templates select="guiao:conteudo" mode="index">
+          <xsl:with-param name="depth" select="1"/>
+        </xsl:apply-templates>
+      </g:script>
+    </rdf:RDF>
+  </xsl:template>
+</xsl:stylesheet>

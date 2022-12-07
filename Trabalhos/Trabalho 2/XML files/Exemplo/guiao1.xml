@@ -5,7 +5,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../guiao.xsd">
 
     <cabecalho data="2022-01-01">
-        <titulo>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</titulo>
+        <titulo>Peça de teatro 1</titulo>
         <autores>
             <autor>Jorge</autor>
             <autor>Joaquim</autor>
