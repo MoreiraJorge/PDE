@@ -23,7 +23,6 @@
             <xsl:apply-templates select="guiao:cabecalho/guiao:aderecos"/>
             <xsl:apply-templates select="guiao:conteudo" mode="index"/>
           </rdf:Description>
-
         </g:Guiao>
       </rdf:Description>
     </rdf:RDF>
