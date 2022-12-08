@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?> 
-<xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:tipo="urn:tipo" version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:g="http://www.guiao.pt/">
+  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:g="http://www.dc.fc.up.pt/T3/" xmlns:tipo="urn:tipo" version="1.0">
 
   <xsl:template match="guiao:autores">
-    <g:autors>
-      <rdf:Bag>
-        <xsl:apply-templates select="guiao:autor"/>
-      </rdf:Bag>
-    </g:autors>
+    <g:Autores>
+      <rdf:Description>
+        <rdf:type rdf:resource="Autores"/>
+        <g:Lista>
+          <rdf:Seq>
+            <xsl:apply-templates select="guiao:autor"/>
+          </rdf:Seq>
+        </g:Lista>
+      </rdf:Description>
+    </g:Autores>
   </xsl:template>
 
   <xsl:template match="guiao:autor">
@@ -18,11 +22,16 @@
   </xsl:template>
 
   <xsl:template match="guiao:personagens">
-    <g:characters>
-      <rdf:Bag>
-        <xsl:apply-templates select="tipo:personagem"/>
-      </rdf:Bag>
-    </g:characters>
+    <g:Personagens>
+      <rdf:Description>
+        <rdf:type rdf:resource="Personagens"/>
+        <g:Lista>
+          <rdf:Seq>
+            <xsl:apply-templates select="tipo:personagem"/>
+          </rdf:Seq>
+        </g:Lista>
+      </rdf:Description>
+    </g:Personagens>
   </xsl:template>
 
   <!-- Questionar acerca da utilização do FOAF -->
@@ -31,11 +40,16 @@
   </xsl:template>
 
   <xsl:template match="guiao:aderecos">
-    <g:props>
-      <rdf:Bag>
-        <xsl:apply-templates select="tipo:adereco"/>
-      </rdf:Bag>
-    </g:props>
+    <g:Aderecos>
+      <rdf:Description>
+        <rdf:type rdf:resource="Aderecos"/>
+        <g:Lista>
+          <rdf:Seq>
+            <xsl:apply-templates select="tipo:adereco"/>
+          </rdf:Seq>
+        </g:Lista>
+      </rdf:Description>
+    </g:Aderecos>
   </xsl:template>
 
   <xsl:template match="tipo:adereco">

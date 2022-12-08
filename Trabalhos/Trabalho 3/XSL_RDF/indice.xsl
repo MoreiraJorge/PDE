@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?> 
-<xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:hierarquia="urn:hierarquia" xmlns:tipo="urn:tipo"
-  version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:guiao="urn:guiao" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:g="http://www.guiao.pt/">
+  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:g="http://www.dc.fc.up.pt/T3/" xmlns:hierarquia="urn:hierarquia" xmlns:tipo="urn:tipo"
+  version="1.0">
 
   <xsl:template match="guiao:conteudo" mode="index">
     <xsl:param name="depth"/>
-    <g:index>
-      <rdf:Seq>
-        <xsl:apply-templates select="hierarquia:temporada" mode="index">
-          <xsl:with-param name="depth" select="$depth"/>
-        </xsl:apply-templates>
+    <g:Indice>
+      <rdf:Description>
+        <rdf:type rdf:resource="Indice"/>
+        <g:Lista>
+          <rdf:Seq>
+            <xsl:apply-templates select="hierarquia:temporada" mode="index">
+              <xsl:with-param name="depth" select="$depth"/>
+            </xsl:apply-templates>
 
-        <xsl:apply-templates select="hierarquia:parte" mode="index">
-          <xsl:with-param name="depth" select="$depth"/>
-        </xsl:apply-templates>
+            <xsl:apply-templates select="hierarquia:parte" mode="index">
+              <xsl:with-param name="depth" select="$depth"/>
+            </xsl:apply-templates>
 
-        <xsl:apply-templates select="hierarquia:cena" mode="index">
-          <xsl:with-param name="depth" select="$depth"/>
-        </xsl:apply-templates>
-      </rdf:Seq>
-    </g:index>
+            <xsl:apply-templates select="hierarquia:cena" mode="index">
+              <xsl:with-param name="depth" select="$depth"/>
+            </xsl:apply-templates>
+          </rdf:Seq>
+        </g:Lista>
+      </rdf:Description>
+    </g:Indice>
   </xsl:template>
 
   <xsl:template match="hierarquia:temporada" mode="index">

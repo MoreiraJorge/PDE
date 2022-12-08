@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:guiao="urn:guiao" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:g="http://www.dc.fc.up.pt/T3/" xml:base="http://www.dc.fc.up.pt/T3/">
+   <rdf:Description rdf:about="http://www.dc.fc.up.pt/T3/">
+      <rdf:type rdf:resource="Trabalho3"/>
+      <g:Guiao>
+         <rdf:Description dc:date="2022-01-01" dc:title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." g:synopsis="It is a long established fact that a reader will be distracted by the readable&#xA;            content of a page when looking at its layout. The point of using Lorem Ipsum is that it&#xA;            has a more-or-less normal distribution of letters, as opposed to using 'Content here,&#xA;            content here', making it look like readable English. Many desktop publishing packages&#xA;            and web page editors now use Lorem Ipsum as their default model text, and a search for&#xA;            'lorem ipsum' will uncover many web sites still in their infancy. Various versions have&#xA;            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and&#xA;            the like). ">
+            <rdf:type rdf:resource="Guiao"/>
+            <g:Autores xmlns:tipo="urn:tipo">
+               <rdf:Description>
+                  <rdf:type rdf:resource="Autores"/>
+                  <g:Lista>
+                     <rdf:Seq>
+                        <rdf:li dc:creator="Jorge"/>
+                        <rdf:li dc:creator="Joaquim"/>
+                     </rdf:Seq>
+                  </g:Lista>
+               </rdf:Description>
+            </g:Autores>
+            <g:Personagens xmlns:tipo="urn:tipo">
+               <rdf:Description>
+                  <rdf:type rdf:resource="Personagens"/>
+                  <g:Lista>
+                     <rdf:Seq>
+                        <rdf:li foaf:Person="Pirata" dc:identifier="p1" dc:description="personagem pirata malvado"/>
+                        <rdf:li foaf:Person="Capitão&#xA;        valente" dc:identifier="p2" dc:description="personagem capitão valente"/>
+                        <rdf:li foaf:Person="Faisca amarelo" dc:identifier="p7" dc:description="personagem andorinha"/>
+                     </rdf:Seq>
+                  </g:Lista>
+               </rdf:Description>
+            </g:Personagens>
+            <g:Aderecos xmlns:tipo="urn:tipo">
+               <rdf:Description>
+                  <rdf:type rdf:resource="Aderecos"/>
+                  <g:Lista>
+                     <rdf:Seq>
+                        <rdf:li g:prop="Arma" dc:identifier="adr1"/>
+                        <rdf:li g:prop="Espada" dc:identifier="adr2"/>
+                        <rdf:li g:prop="Canhão" dc:identifier="adr3"/>
+                        <rdf:li g:prop="Pedra" dc:identifier="adr4"/>
+                        <rdf:li g:prop="Árvore" dc:identifier="adr5"/>
+                        <rdf:li g:prop="Mota aquática" dc:identifier="adr6"/>
+                     </rdf:Seq>
+                  </g:Lista>
+               </rdf:Description>
+            </g:Aderecos>
+            <g:Indice xmlns:hierarquia="urn:hierarquia" xmlns:tipo="urn:tipo">
+               <rdf:Description>
+                  <rdf:type rdf:resource="Indice"/>
+                  <g:Lista>
+                     <rdf:Seq>
+                        <rdf:_1> Temporada 1</rdf:_1>
+                        <rdf:_2> Episodio 1</rdf:_2>
+                        <rdf:_4> Cena 1</rdf:_4>
+                        <rdf:_2> Episodio 2</rdf:_2>
+                        <rdf:_4> Cena 1</rdf:_4>
+                        <rdf:_1> Temporada 2</rdf:_1>
+                        <rdf:_2> Episodio 1</rdf:_2>
+                        <rdf:_4> Cena 1</rdf:_4>
+                        <rdf:_4> Cena 2</rdf:_4>
+                        <rdf:_4> Cena 3</rdf:_4>
+                     </rdf:Seq>
+                  </g:Lista>
+               </rdf:Description>
+            </g:Indice>
+         </rdf:Description>
+      </g:Guiao>
+   </rdf:Description>
+</rdf:RDF>
