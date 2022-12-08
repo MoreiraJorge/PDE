@@ -17,9 +17,7 @@
         <xsl:apply-templates select="guiao:cabecalho/guiao:personagens"/>
         <xsl:apply-templates select="guiao:cabecalho/guiao:aderecos"/>
 
-        <xsl:apply-templates select="guiao:conteudo" mode="index">
-          <xsl:with-param name="depth" select="1"/>
-        </xsl:apply-templates>
+        <xsl:apply-templates select="guiao:conteudo" mode="index" />
       </g:script>
     </rdf:RDF>
   </xsl:template>

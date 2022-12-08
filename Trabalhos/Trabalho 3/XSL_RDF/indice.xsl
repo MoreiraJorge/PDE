@@ -9,50 +9,35 @@
     <xsl:param name="depth"/>
     <g:index>
       <rdf:Seq>
-        <xsl:apply-templates select="hierarquia:temporada" mode="index">
-          <xsl:with-param name="depth" select="$depth"/>
-        </xsl:apply-templates>
-
-        <xsl:apply-templates select="hierarquia:parte" mode="index">
-          <xsl:with-param name="depth" select="$depth"/>
-        </xsl:apply-templates>
-
-        <xsl:apply-templates select="hierarquia:cena" mode="index">
-          <xsl:with-param name="depth" select="$depth"/>
-        </xsl:apply-templates>
+        <xsl:apply-templates select="hierarquia:temporada" mode="index" />
+        <xsl:apply-templates select="hierarquia:parte" mode="index" />
+        <xsl:apply-templates select="hierarquia:cena" mode="index" />
       </rdf:Seq>
     </g:index>
   </xsl:template>
 
   <xsl:template match="hierarquia:temporada" mode="index">
-    <xsl:param name="depth"/>
     <rdf:_1> Temporada <xsl:number format="1"/>
     </rdf:_1>
     <xsl:apply-templates select="hierarquia:episodio" mode="index">
-      <xsl:with-param name="depth" select="$depth + 1"/>
     </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="hierarquia:episodio" mode="index">
-    <xsl:param name="depth"/>
     <rdf:_2> Episodio <xsl:number format="1"/>
     </rdf:_2>
     <xsl:apply-templates select="hierarquia:cena" mode="index">
-      <xsl:with-param name="depth" select="$depth + 1"/>
     </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="hierarquia:parte" mode="index">
-    <xsl:param name="depth"/>
     <rdf:_3> Parte <xsl:number format="1"/>
     </rdf:_3>
     <xsl:apply-templates select="hierarquia:cena" mode="index">
-      <xsl:with-param name="depth" select="$depth + 1"/>
     </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="hierarquia:cena" mode="index">
-    <xsl:param name="depth"/>
     <rdf:_4> Cena <xsl:number format="1"/>
     </rdf:_4>
   </xsl:template>
