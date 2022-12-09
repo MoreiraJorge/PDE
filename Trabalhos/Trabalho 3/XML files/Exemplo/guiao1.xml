@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl "href="../XSL/guiao.xsl" ?>
 
 <guiao xmlns="urn:guiao" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../guiao.xsd">
+    xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../guiao.xsd" id="1">
 
     <cabecalho data="2022-01-01">
         <titulo>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</titulo>

@@ -11,19 +11,13 @@
 
   <xsl:template match="guiao:guiao">
     <rdf:RDF xml:base="http://www.dc.fc.up.pt/T3/">
-      <rdf:Description rdf:about="http://www.dc.fc.up.pt/T3/">
-        <rdf:type rdf:resource="Trabalho3"/>
-        <!-- Perguntar dos abouts -->
-        <g:Guiao>
-          <rdf:Description dc:date="{guiao:cabecalho/@data}"
-            dc:title="{guiao:cabecalho/guiao:titulo}" g:synopsis="{guiao:cabecalho/guiao:sinopse}">
-            <rdf:type rdf:resource="Guiao"/>
-            <xsl:apply-templates select="guiao:cabecalho/guiao:autores"/>
-            <xsl:apply-templates select="guiao:cabecalho/guiao:personagens"/>
-            <xsl:apply-templates select="guiao:cabecalho/guiao:aderecos"/>
-            <xsl:apply-templates select="guiao:conteudo" mode="index"/>
-          </rdf:Description>
-        </g:Guiao>
+      <rdf:Description dc:date="{guiao:cabecalho/@data}" dc:title="{guiao:cabecalho/guiao:titulo}"
+        g:synopsis="{guiao:cabecalho/guiao:sinopse}" rdf:about="Guiao_{@id}">
+        <rdf:type rdf:resource="Guiao"/>
+        <xsl:apply-templates select="guiao:cabecalho/guiao:autores"/>
+        <xsl:apply-templates select="guiao:cabecalho/guiao:personagens"/>
+        <xsl:apply-templates select="guiao:cabecalho/guiao:aderecos"/>
+        <xsl:apply-templates select="guiao:conteudo" mode="index"/>
       </rdf:Description>
     </rdf:RDF>
   </xsl:template>

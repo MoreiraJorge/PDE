@@ -6,14 +6,9 @@
 
   <xsl:template match="guiao:autores">
     <g:Autores>
-      <rdf:Description>
-        <rdf:type rdf:resource="Autores"/>
-        <g:Lista>
-          <rdf:Seq>
-            <xsl:apply-templates select="guiao:autor"/>
-          </rdf:Seq>
-        </g:Lista>
-      </rdf:Description>
+      <rdf:Seq rdf:about="Autores">
+        <xsl:apply-templates select="guiao:autor"/>
+      </rdf:Seq>
     </g:Autores>
   </xsl:template>
 
@@ -23,32 +18,21 @@
 
   <xsl:template match="guiao:personagens">
     <g:Personagens>
-      <rdf:Description>
-        <rdf:type rdf:resource="Personagens"/>
-        <g:Lista>
-          <rdf:Seq>
-            <xsl:apply-templates select="tipo:personagem"/>
-          </rdf:Seq>
-        </g:Lista>
-      </rdf:Description>
+      <rdf:Seq rdf:about="Personagens">
+        <xsl:apply-templates select="tipo:personagem"/>
+      </rdf:Seq>
     </g:Personagens>
   </xsl:template>
 
-  <!-- Questionar acerca da utilização do FOAF -->
   <xsl:template match="tipo:personagem">
     <rdf:li foaf:Person="{node()}" dc:identifier="{@id}" dc:description="{@descricao}"/>
   </xsl:template>
 
   <xsl:template match="guiao:aderecos">
     <g:Aderecos>
-      <rdf:Description>
-        <rdf:type rdf:resource="Aderecos"/>
-        <g:Lista>
-          <rdf:Seq>
-            <xsl:apply-templates select="tipo:adereco"/>
-          </rdf:Seq>
-        </g:Lista>
-      </rdf:Description>
+      <rdf:Seq rdf:about="Aderecos">
+        <xsl:apply-templates select="tipo:adereco"/>
+      </rdf:Seq>
     </g:Aderecos>
   </xsl:template>
 

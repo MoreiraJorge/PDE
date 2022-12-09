@@ -16,6 +16,7 @@
             <xs:element name="cabecalho" type="guiao:Cabecalho"/>
             <xs:element name="conteudo" type="hierarquia:Conteudo"/>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:int"/>
     </xs:complexType>
 
     <xs:complexType name="Cabecalho">

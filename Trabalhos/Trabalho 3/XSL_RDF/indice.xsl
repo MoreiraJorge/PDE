@@ -7,16 +7,11 @@
 
   <xsl:template match="guiao:conteudo" mode="index">
     <g:Indice>
-      <rdf:Description>
-        <rdf:type rdf:resource="Indice"/>
-        <g:Lista>
-          <rdf:Seq>
-            <xsl:apply-templates select="hierarquia:temporada" mode="index"/>
-            <xsl:apply-templates select="hierarquia:parte" mode="index"/>
-            <xsl:apply-templates select="hierarquia:cena" mode="index"/>
-          </rdf:Seq>
-        </g:Lista>
-      </rdf:Description>
+        <rdf:Seq rdf:about="Indice">
+          <xsl:apply-templates select="hierarquia:temporada" mode="index"/>
+          <xsl:apply-templates select="hierarquia:parte" mode="index"/>
+          <xsl:apply-templates select="hierarquia:cena" mode="index"/>
+        </rdf:Seq>
     </g:Indice>
   </xsl:template>
 
