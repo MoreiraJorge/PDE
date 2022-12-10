@@ -1,10 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xml:lang="en"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:g="http://www.guiao.pt/">
+<rdf:RDF xml:lang="en" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:g="http://www.dc.fc.up.pt/T3/">
+
+    <rdfs:Class rdf:about="Guiao">
+        <rdfs:comment>Um Guiao</rdfs:comment>
+        <rdfs:label>Guiao</rdfs:label>
+    </rdfs:Class>
+
+    <rdfs:Property rdf:about="Nome">
+        <rdfs:domain rdf:resource="Guiao"/>
+        <rdfs:range rdf:resource="Literal"/>
+    </rdfs:Property>
     
+    <rdfs:Property rdf:about="Autor">
+        <rdfs:subPropertyOf rdf:resource="Autores"/>
+        <rdfs:domain rdf:resource="Guiao"/>
+        <rdfs:range rdf:resource="Literal"/>
+    </rdfs:Property>
     
-    
-    
+    <rdfs:Property rdf:about="Autores">
+        <rdfs:domain rdf:resource="Guiao"/>
+        <rdfs:range rdf:resource="Guiao"/>
+    </rdfs:Property>
+
+    <rdfs:Class rdf:about="Seccao">
+        <rdfs:comment>Descreve uma secção do guião</rdfs:comment>
+        <rdfs:label>Secção</rdfs:label>
+        <rdfs:subClassOf rdf:resource="Guiao"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="Temporada">
+        <rdfs:comment>Descreve uma Temporada do guião</rdfs:comment>
+        <rdfs:label>Temporada</rdfs:label>
+        <rdfs:subClassOf rdf:resource="Seccao"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="Episodio">
+        <rdfs:comment>Descreve um Episodio do guião</rdfs:comment>
+        <rdfs:label>Episodio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="Seccao"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="Parte">
+        <rdfs:comment>Descreve uma Parte do guião</rdfs:comment>
+        <rdfs:label>Parte</rdfs:label>
+        <rdfs:subClassOf rdf:resource="Seccao"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="Cena">
+        <rdfs:comment>Descreve uma Cena do guião</rdfs:comment>
+        <rdfs:label>Cena</rdfs:label>
+        <rdfs:subClassOf rdf:resource="Seccao"/>
+    </rdfs:Class>
+
 </rdf:RDF>

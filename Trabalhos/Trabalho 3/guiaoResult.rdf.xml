@@ -28,53 +28,53 @@
       <g:Indice xmlns:hierarquia="urn:hierarquia" xmlns:tipo="urn:tipo">
          <rdf:Description rdf:about="Indice">
             <g:Temporada>
-               <rdf:Description>
-                  <dc:Title>Temporada 1</dc:Title>
+               <rdf:Description rdf:about="Temporada">
+                  <g:Nome>Temporada 1</g:Nome>
                </rdf:Description>
             </g:Temporada>
             <g:Episodio>
-               <rdf:Description>
-                  <dc:Title>Episodio 1</dc:Title>
+               <rdf:Description rdf:about="Episodio">
+                  <g:Nome>Episodio 1</g:Nome>
                </rdf:Description>
             </g:Episodio>
             <g:Cena>
-               <rdf:Description>
-                  <dc:Title>Cena 1</dc:Title>
+               <rdf:Description rdf:about="Cena">
+                  <g:Nome>Cena 1</g:Nome>
                </rdf:Description>
             </g:Cena>
             <g:Episodio>
-               <rdf:Description>
-                  <dc:Title>Episodio 2</dc:Title>
+               <rdf:Description rdf:about="Episodio">
+                  <g:Nome>Episodio 2</g:Nome>
                </rdf:Description>
             </g:Episodio>
             <g:Cena>
-               <rdf:Description>
-                  <dc:Title>Cena 1</dc:Title>
+               <rdf:Description rdf:about="Cena">
+                  <g:Nome>Cena 1</g:Nome>
                </rdf:Description>
             </g:Cena>
             <g:Temporada>
-               <rdf:Description>
-                  <dc:Title>Temporada 2</dc:Title>
+               <rdf:Description rdf:about="Temporada">
+                  <g:Nome>Temporada 2</g:Nome>
                </rdf:Description>
             </g:Temporada>
             <g:Episodio>
-               <rdf:Description>
-                  <dc:Title>Episodio 1</dc:Title>
+               <rdf:Description rdf:about="Episodio">
+                  <g:Nome>Episodio 1</g:Nome>
                </rdf:Description>
             </g:Episodio>
             <g:Cena>
-               <rdf:Description>
-                  <dc:Title>Cena 1</dc:Title>
+               <rdf:Description rdf:about="Cena">
+                  <g:Nome>Cena 1</g:Nome>
                </rdf:Description>
             </g:Cena>
             <g:Cena>
-               <rdf:Description>
-                  <dc:Title>Cena 2</dc:Title>
+               <rdf:Description rdf:about="Cena">
+                  <g:Nome>Cena 2</g:Nome>
                </rdf:Description>
             </g:Cena>
             <g:Cena>
-               <rdf:Description>
-                  <dc:Title>Cena 3</dc:Title>
+               <rdf:Description rdf:about="Cena">
+                  <g:Nome>Cena 3</g:Nome>
                </rdf:Description>
             </g:Cena>
          </rdf:Description>
