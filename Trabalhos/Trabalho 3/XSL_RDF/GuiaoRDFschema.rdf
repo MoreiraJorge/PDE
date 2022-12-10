@@ -1,56 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xml:lang="en" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:g="http://www.dc.fc.up.pt/T3/">
+<!DOCTYPE rdf:RDF [ 
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY base "http://www.dc.fc.up.pt/T3/">
+]>
+<rdf:RDF xmlns:rdf="&rdf;" xmlns:rdfs="&rdfs;" xmlns:g="&base;" xml:base="&base;">
 
     <rdfs:Class rdf:about="Guiao">
-        <rdfs:comment>Um Guiao</rdfs:comment>
-        <rdfs:label>Guiao</rdfs:label>
+        <rdfs:comment>Classe Guiao</rdfs:comment>
     </rdfs:Class>
 
-    <rdfs:Property rdf:about="Nome">
+    <rdfs:Property rdf:about="sinopse">
         <rdfs:domain rdf:resource="Guiao"/>
-        <rdfs:range rdf:resource="Literal"/>
+        <rdfs:Literal rdf:resource="&rdfs;Literal"/>
+        <rdfs:comment>Sinopse do Guiao</rdfs:comment>
     </rdfs:Property>
-    
-    <rdfs:Property rdf:about="Autor">
-        <rdfs:subPropertyOf rdf:resource="Autores"/>
+
+    <rdfs:Property rdf:about="ParteGenerica">
         <rdfs:domain rdf:resource="Guiao"/>
-        <rdfs:range rdf:resource="Literal"/>
+        <rdfs:range rdf:resource="Guiao"/>
+        <rdfs:comment>Parte do Guiao</rdfs:comment>
     </rdfs:Property>
-    
+
     <rdfs:Property rdf:about="Autores">
         <rdfs:domain rdf:resource="Guiao"/>
         <rdfs:range rdf:resource="Guiao"/>
+        <rdfs:comment>Autores do Guiao</rdfs:comment>
+    </rdfs:Property>
+    
+    <rdfs:Property rdf:about="Personagens">
+        <rdfs:domain rdf:resource="Guiao"/>
+        <rdfs:range rdf:resource="Guiao"/>
+        <rdfs:comment>Personagens do Guiao</rdfs:comment>
+    </rdfs:Property>
+    
+    <rdfs:Property rdf:about="Aderecos">
+        <rdfs:domain rdf:resource="Guiao"/>
+        <rdfs:range rdf:resource="Guiao"/>
+        <rdfs:comment>Adereços do Guiao</rdfs:comment>
+    </rdfs:Property>
+    
+    <rdfs:Class rdf:about="ParteGenerica" />
+    
+    <rdfs:Property rdf:about="id">
+        <rdfs:domain rdf:resource="ParteGenerica"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </rdfs:Property>
 
-    <rdfs:Class rdf:about="Seccao">
-        <rdfs:comment>Descreve uma secção do guião</rdfs:comment>
-        <rdfs:label>Secção</rdfs:label>
-        <rdfs:subClassOf rdf:resource="Guiao"/>
-    </rdfs:Class>
-
     <rdfs:Class rdf:about="Temporada">
-        <rdfs:comment>Descreve uma Temporada do guião</rdfs:comment>
-        <rdfs:label>Temporada</rdfs:label>
-        <rdfs:subClassOf rdf:resource="Seccao"/>
+        <rdfs:subClassOf rdf:resource="ParteGenerica"/>
     </rdfs:Class>
 
     <rdfs:Class rdf:about="Episodio">
-        <rdfs:comment>Descreve um Episodio do guião</rdfs:comment>
-        <rdfs:label>Episodio</rdfs:label>
-        <rdfs:subClassOf rdf:resource="Seccao"/>
-    </rdfs:Class>
-
-    <rdfs:Class rdf:about="Parte">
-        <rdfs:comment>Descreve uma Parte do guião</rdfs:comment>
-        <rdfs:label>Parte</rdfs:label>
-        <rdfs:subClassOf rdf:resource="Seccao"/>
+        <rdfs:subClassOf rdf:resource="ParteGenerica"/>
     </rdfs:Class>
 
     <rdfs:Class rdf:about="Cena">
-        <rdfs:comment>Descreve uma Cena do guião</rdfs:comment>
-        <rdfs:label>Cena</rdfs:label>
-        <rdfs:subClassOf rdf:resource="Seccao"/>
+        <rdfs:subClassOf rdf:resource="ParteGenerica"/>
+    </rdfs:Class>
+
+    <rdfs:Property rdf:about="contexto">
+        <rdfs:domain rdf:resource="Cena"/>
+        <rdfs:Literal rdf:resource="&rdfs;Literal"/>
+        <rdfs:comment>Contexto da Cena</rdfs:comment>
+    </rdfs:Property>
+
+    <rdfs:Class rdf:about="Parte">
+        <rdfs:subClassOf rdf:resource="ParteGenerica"/>
     </rdfs:Class>
 
 </rdf:RDF>

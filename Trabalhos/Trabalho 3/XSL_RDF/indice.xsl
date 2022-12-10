@@ -17,36 +17,32 @@
 
   <xsl:template match="hierarquia:temporada" mode="index">
     <g:Temporada>
-      <rdf:Description rdf:about="Temporada">
-        <g:Nome>Temporada <xsl:number format="1"/></g:Nome>
+      <rdf:Description rdf:about="Temporada_{@num-temporada}">
+        <xsl:apply-templates select="hierarquia:episodio" mode="index"/>
       </rdf:Description>
     </g:Temporada>
-    <xsl:apply-templates select="hierarquia:episodio" mode="index"> </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="hierarquia:episodio" mode="index">
     <g:Episodio>
-      <rdf:Description rdf:about="Episodio">
-        <g:Nome>Episodio <xsl:number format="1"/></g:Nome>
+      <rdf:Description rdf:about="Episodio_{../@num-temporada}.{@num-episodio}">
+        <xsl:apply-templates select="hierarquia:cena" mode="index"/>
       </rdf:Description>
     </g:Episodio>
-    <xsl:apply-templates select="hierarquia:cena" mode="index"> </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="hierarquia:parte" mode="index">
     <g:Parte>
-      <rdf:Description rdf:about="Parte">
-        <g:Nome>Parte <xsl:number format="1"/></g:Nome>
+      <rdf:Description rdf:about="Parte_{@num-parte}">
+
+        <xsl:apply-templates select="hierarquia:cena" mode="index"> </xsl:apply-templates>
       </rdf:Description>
     </g:Parte>
-    <xsl:apply-templates select="hierarquia:cena" mode="index"> </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="hierarquia:cena" mode="index">
     <g:Cena>
-      <rdf:Description rdf:about="Cena">
-        <g:Nome>Cena <xsl:number format="1"/></g:Nome>
-      </rdf:Description>
+      <rdf:Description rdf:about="Cena_{@num-cena}"> </rdf:Description>
     </g:Cena>
   </xsl:template>
 

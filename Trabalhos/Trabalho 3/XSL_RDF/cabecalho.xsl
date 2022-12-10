@@ -13,7 +13,7 @@
   </xsl:template>
 
   <xsl:template match="guiao:autor">
-    <rdf:li dc:creator="{node()}"/>
+    <rdf:li foaf:Person="{node()}" dc:creator="{node()}"/>
   </xsl:template>
 
   <xsl:template match="guiao:personagens">

@@ -55,6 +55,7 @@
                 maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="contexto" type="xs:normalizedString"/>
+        <xs:attribute name="num-cena" type="xs:int" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="Fala" mixed="true">

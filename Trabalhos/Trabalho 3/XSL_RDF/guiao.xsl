@@ -12,7 +12,7 @@
   <xsl:template match="guiao:guiao">
     <rdf:RDF xml:base="http://www.dc.fc.up.pt/T3/">
       <rdf:Description dc:date="{guiao:cabecalho/@data}" dc:title="{guiao:cabecalho/guiao:titulo}"
-        g:synopsis="{guiao:cabecalho/guiao:sinopse}" rdf:about="Guiao_{@id}">
+        g:sinopse="{guiao:cabecalho/guiao:sinopse}" rdf:about="Guiao_{@id}">
         <rdf:type rdf:resource="Guiao"/>
         <xsl:apply-templates select="guiao:cabecalho/guiao:autores"/>
         <xsl:apply-templates select="guiao:cabecalho/guiao:personagens"/>

@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl "href="../XSL/guiao.xsl" ?>
 
 <guiao xmlns="urn:guiao" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../guiao.xsd">
+    xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="../guiao.xsd" id="2">
     <cabecalho data="2022-01-01">
         <titulo>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</titulo>
         <autores>
@@ -27,6 +27,7 @@
             </personagens>
             <cena
                 contexto="Durante uma navegação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+                num-cena="1"
                 > Durante uma tempestade marítima do mar mediterrãneo o
                 <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
                 <refere ref-personagem="p2"/> . Durante esta descoberta o
@@ -39,6 +40,7 @@
                 atacar... </cena>
             <cena
                 contexto="Durante uma navegação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+                num-cena="2"
                 > Durante uma tempestadde marítima do mar mediterraneo o
                 <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
                 <refere ref-personagem="p3"/> . Durante esta descoberta o
@@ -50,12 +52,13 @@
                 <refere ref-personagem="p3"/> preparava o seu <adereco ref-adereco="adr3"/> para
                 atacar... </cena>
         </parte>
-        <parte num-parte="1" xmlns="urn:hierarquia">
+        <parte num-parte="2" xmlns="urn:hierarquia">
             <personagens>
                 <personagem id="p4" descricao="personagem papagaio" xmlns="urn:tipo">Faisca 2</personagem>
             </personagens>
             <cena
                 contexto="Durante uma navegação pelo mar mediterâneo um pirata malvado avistou o navio de um capitão valente"
+                num-cena="1"
                 > Durante uma tempestadde marítima do mar mediterraneo o
                 <refere ref-personagem="p1"/> avistou um navio à distãncia que pertencia ao
                 <refere ref-personagem="p3"/> . Durante esta descoberta o

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:guiao="urn:guiao" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:g="http://www.dc.fc.up.pt/T3/" xml:base="http://www.dc.fc.up.pt/T3/">
-   <rdf:Description dc:date="2022-01-01" dc:title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." g:synopsis="It is a long established fact that a reader will be distracted by the readable&#xA;            content of a page when looking at its layout. The point of using Lorem Ipsum is that it&#xA;            has a more-or-less normal distribution of letters, as opposed to using 'Content here,&#xA;            content here', making it look like readable English. Many desktop publishing packages&#xA;            and web page editors now use Lorem Ipsum as their default model text, and a search for&#xA;            'lorem ipsum' will uncover many web sites still in their infancy. Various versions have&#xA;            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and&#xA;            the like). " rdf:about="Guiao_1">
+   <rdf:Description dc:date="2022-01-01" dc:title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." g:sinopse="It is a long established fact that a reader will be distracted by the readable&#xA;            content of a page when looking at its layout. The point of using Lorem Ipsum is that it&#xA;            has a more-or-less normal distribution of letters, as opposed to using 'Content here,&#xA;            content here', making it look like readable English. Many desktop publishing packages&#xA;            and web page editors now use Lorem Ipsum as their default model text, and a search for&#xA;            'lorem ipsum' will uncover many web sites still in their infancy. Various versions have&#xA;            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and&#xA;            the like). " rdf:about="Guiao_3">
       <rdf:type rdf:resource="Guiao"/>
       <g:Autores xmlns:tipo="urn:tipo">
          <rdf:Seq rdf:about="Autores">
-            <rdf:li dc:creator="Jorge"/>
-            <rdf:li dc:creator="Joaquim"/>
+            <rdf:li foaf:Person="Jorge" dc:creator="Jorge"/>
+            <rdf:li foaf:Person="Joaquim" dc:creator="Joaquim"/>
          </rdf:Seq>
       </g:Autores>
       <g:Personagens xmlns:tipo="urn:tipo">
@@ -27,55 +27,11 @@
       </g:Aderecos>
       <g:Indice xmlns:hierarquia="urn:hierarquia" xmlns:tipo="urn:tipo">
          <rdf:Description rdf:about="Indice">
-            <g:Temporada>
-               <rdf:Description rdf:about="Temporada">
-                  <g:Nome>Temporada 1</g:Nome>
-               </rdf:Description>
-            </g:Temporada>
-            <g:Episodio>
-               <rdf:Description rdf:about="Episodio">
-                  <g:Nome>Episodio 1</g:Nome>
-               </rdf:Description>
-            </g:Episodio>
             <g:Cena>
-               <rdf:Description rdf:about="Cena">
-                  <g:Nome>Cena 1</g:Nome>
-               </rdf:Description>
-            </g:Cena>
-            <g:Episodio>
-               <rdf:Description rdf:about="Episodio">
-                  <g:Nome>Episodio 2</g:Nome>
-               </rdf:Description>
-            </g:Episodio>
-            <g:Cena>
-               <rdf:Description rdf:about="Cena">
-                  <g:Nome>Cena 1</g:Nome>
-               </rdf:Description>
-            </g:Cena>
-            <g:Temporada>
-               <rdf:Description rdf:about="Temporada">
-                  <g:Nome>Temporada 2</g:Nome>
-               </rdf:Description>
-            </g:Temporada>
-            <g:Episodio>
-               <rdf:Description rdf:about="Episodio">
-                  <g:Nome>Episodio 1</g:Nome>
-               </rdf:Description>
-            </g:Episodio>
-            <g:Cena>
-               <rdf:Description rdf:about="Cena">
-                  <g:Nome>Cena 1</g:Nome>
-               </rdf:Description>
+               <rdf:Description rdf:about="Cena_1"/>
             </g:Cena>
             <g:Cena>
-               <rdf:Description rdf:about="Cena">
-                  <g:Nome>Cena 2</g:Nome>
-               </rdf:Description>
-            </g:Cena>
-            <g:Cena>
-               <rdf:Description rdf:about="Cena">
-                  <g:Nome>Cena 3</g:Nome>
-               </rdf:Description>
+               <rdf:Description rdf:about="Cena_2"/>
             </g:Cena>
          </rdf:Description>
       </g:Indice>
