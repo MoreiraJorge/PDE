@@ -26,18 +26,58 @@
          </rdf:Seq>
       </g:Aderecos>
       <g:Indice xmlns:hierarquia="urn:hierarquia" xmlns:tipo="urn:tipo">
-         <rdf:Seq rdf:about="Indice">
-            <rdf:_1> Temporada 1</rdf:_1>
-            <rdf:_2> Episodio 1</rdf:_2>
-            <rdf:_4> Cena 1</rdf:_4>
-            <rdf:_2> Episodio 2</rdf:_2>
-            <rdf:_4> Cena 1</rdf:_4>
-            <rdf:_1> Temporada 2</rdf:_1>
-            <rdf:_2> Episodio 1</rdf:_2>
-            <rdf:_4> Cena 1</rdf:_4>
-            <rdf:_4> Cena 2</rdf:_4>
-            <rdf:_4> Cena 3</rdf:_4>
-         </rdf:Seq>
+         <rdf:Description rdf:about="Indice">
+            <g:Temporada>
+               <rdf:Description>
+                  <dc:Title>Temporada 1</dc:Title>
+               </rdf:Description>
+            </g:Temporada>
+            <g:Episodio>
+               <rdf:Description>
+                  <dc:Title>Episodio 1</dc:Title>
+               </rdf:Description>
+            </g:Episodio>
+            <g:Cena>
+               <rdf:Description>
+                  <dc:Title>Cena 1</dc:Title>
+               </rdf:Description>
+            </g:Cena>
+            <g:Episodio>
+               <rdf:Description>
+                  <dc:Title>Episodio 2</dc:Title>
+               </rdf:Description>
+            </g:Episodio>
+            <g:Cena>
+               <rdf:Description>
+                  <dc:Title>Cena 1</dc:Title>
+               </rdf:Description>
+            </g:Cena>
+            <g:Temporada>
+               <rdf:Description>
+                  <dc:Title>Temporada 2</dc:Title>
+               </rdf:Description>
+            </g:Temporada>
+            <g:Episodio>
+               <rdf:Description>
+                  <dc:Title>Episodio 1</dc:Title>
+               </rdf:Description>
+            </g:Episodio>
+            <g:Cena>
+               <rdf:Description>
+                  <dc:Title>Cena 1</dc:Title>
+               </rdf:Description>
+            </g:Cena>
+            <g:Cena>
+               <rdf:Description>
+                  <dc:Title>Cena 2</dc:Title>
+               </rdf:Description>
+            </g:Cena>
+            <g:Cena>
+               <rdf:Description>
+                  <dc:Title>Cena 3</dc:Title>
+               </rdf:Description>
+            </g:Cena>
+         </rdf:Description>
       </g:Indice>
    </rdf:Description>
 </rdf:RDF>

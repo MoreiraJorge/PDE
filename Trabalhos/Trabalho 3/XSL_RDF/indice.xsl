@@ -7,35 +7,47 @@
 
   <xsl:template match="guiao:conteudo" mode="index">
     <g:Indice>
-        <rdf:Seq rdf:about="Indice">
-          <xsl:apply-templates select="hierarquia:temporada" mode="index"/>
-          <xsl:apply-templates select="hierarquia:parte" mode="index"/>
-          <xsl:apply-templates select="hierarquia:cena" mode="index"/>
-        </rdf:Seq>
+      <rdf:Description rdf:about="Indice">
+        <xsl:apply-templates select="hierarquia:temporada" mode="index"/>
+        <xsl:apply-templates select="hierarquia:parte" mode="index"/>
+        <xsl:apply-templates select="hierarquia:cena" mode="index"/>
+      </rdf:Description>
     </g:Indice>
   </xsl:template>
 
   <xsl:template match="hierarquia:temporada" mode="index">
-    <rdf:_1> Temporada <xsl:number format="1"/>
-    </rdf:_1>
+    <g:Temporada>
+      <rdf:Description>
+        <dc:Title>Temporada <xsl:number format="1"/></dc:Title>
+      </rdf:Description>
+    </g:Temporada>
     <xsl:apply-templates select="hierarquia:episodio" mode="index"> </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="hierarquia:episodio" mode="index">
-    <rdf:_2> Episodio <xsl:number format="1"/>
-    </rdf:_2>
+    <g:Episodio>
+      <rdf:Description>
+        <dc:Title>Episodio <xsl:number format="1"/></dc:Title>
+      </rdf:Description>
+    </g:Episodio>
     <xsl:apply-templates select="hierarquia:cena" mode="index"> </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="hierarquia:parte" mode="index">
-    <rdf:_3> Parte <xsl:number format="1"/>
-    </rdf:_3>
+    <g:Parte>
+      <rdf:Description>
+        <dc:Title>Parte <xsl:number format="1"/></dc:Title>
+      </rdf:Description>
+    </g:Parte>
     <xsl:apply-templates select="hierarquia:cena" mode="index"> </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="hierarquia:cena" mode="index">
-    <rdf:_4> Cena <xsl:number format="1"/>
-    </rdf:_4>
+    <g:Cena>
+      <rdf:Description>
+        <dc:Title>Cena <xsl:number format="1"/></dc:Title>
+      </rdf:Description>
+    </g:Cena>
   </xsl:template>
 
 </xsl:stylesheet>

@@ -37,7 +37,7 @@
   </xsl:template>
 
   <xsl:template match="tipo:adereco">
-    <rdf:li g:prop="{node()}" dc:identifier="{@id}"/>
+    <rdf:li g:prop="{node()}" dc:identifier="{@id}" />
   </xsl:template>
 
 </xsl:stylesheet>
